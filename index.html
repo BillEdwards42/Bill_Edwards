@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link
+    rel="icon"
+    type="image/png"
+    href="./assets/images/personal_logo.png"
+    />
+    <title>Bill's hub</title>
+    <meta
+      name="description"
+      content="My website. Cool stuff."
+    />
+    <meta content="website" property="og:type" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- (Optional) Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- everything stays the same; brand is left, nav-links right, 
+             the main difference is that .nav-container is flex 
+             and brand anchor is 100% high -->
+        <a href="#hero" class="brand">
+          <img
+            src="./assets/images/personal_logo.png"
+            alt="Logo"
+            class="logo"
+          />
+        </a>
+
+        <button class="menu-button" aria-label="Open Menu">
+          <span class="menu-text">menu</span>
+          <div class="menu-icon">
+            <div class="menu-line top"></div>
+            <div class="menu-line bottom"></div>
+          </div>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact-footer" class="contact-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>千里之行，<br />始於足下</h1>
+        <p class="quote-author">— 老子</p>
+      </div>
+      <div class="hero-image-container">
+        <img
+          src="./assets/images/78885_0.jpg"
+          alt="Hero"
+          class="hero-image"
+        />
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <div class="service-inner">
+        <div class="service-image-wrapper">
+          <img
+            src="./assets/images/self.jpg"
+            alt="Services"
+          />
+        </div>
+        <div class="service-text">
+          <h2 class="service-big-title">艾威朋 Bill Edwards</h2>
+          <p class="service-title">國立中正大學 企管系大三</p>
+          <p class="service-description-container">
+            嗨，我是艾威朋。如果你想獲得我的履歷或相關資料，點選下方的Resume鍵。我要利用你被這個超酷網站吸引的時間來和你簡單的講講你在履歷上找不到的東西。在我的長大過程中，我常常接觸網路。我將一些國外的科技業分析師做為榜樣，長時間吸收他們的想法。因為我覺得他們很酷，所以我開始將他們的想法納入自己的邏輯中並開始投資。過了一段時間，我發現我雖然投資能力還不錯，但是理科或是科技知識不足，無法透徹的了解科技公司和相關新聞。從大學開始，因為我很常對聽不懂這些分析師的解析還有podcast感到生氣和氣餒，所以我開始自學科技相關的知識。我先從最基礎的程式開始，從python自學資料分析、網頁設計、機械學習，然後加上修習學校資工系的程式設計(學C)，我發現了科技帶來的樂趣，也把他帶入自己的日常生活中。很剛好的，AI又在近幾年開始爆紅，激發了更多對科技跟商業的興趣。我開始去學習AI如何運作，如何利用它來提升工作能力，到現在我可以很有自信的說我遇過的人沒人比我會用AI。這個網站就是用AI輔助完成的成果之一。我對這個新世代的機會感到非常好奇，除了用它來提升效率，我更常使用他來學習，常常坐下來幾小時和AI討論我不懂的科技業知識。我最近進展到硬體產業了。學習這些領域除了有趣之外，也在課業和工作上帶來許多幫助。希望這些有讓你更了解我，也希望你可以滑完這個網頁，我花了很大的力氣確保各個螢幕尺寸的瀏覽體驗都很好。除了這個網站我還寫了一個部落格，上方的nav bar有連結，請繼續往下滑。
+          </p>
+          <a
+            href="./assets/docs/Bill_resume.pdf"
+            download="Bill_resume.pdf"
+            class="btn"
+          >
+            Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE (VIDEO) -->
+    <section id="who-we-are" class="video-section">
+      <div class="video-bg">
+        <video
+          src="./assets/videos/sora.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="video-content">
+        <h2 class="heading-2">One day, or day one</h2>
+        <p>這是我一直抱持的理念。與其每天抱怨自己能力不足，不如從今天開始改變，將對未來的想像變成現實。</p>
+      </div>
+    </section>
+
+    <!-- STRENGTH SECTION (PINNED, HORIZONTAL SCROLL) -->
+    <section id="strength" class="strength-section">
+      <div class="strength-sticky">
+        <div class="strength-heading">
+          <h2 class="heading-2">特點</h2>
+        </div>
+        <div class="strength-scroller">
+          <!-- 10 big cards to force horizontal overflow -->
+          <div class="strength-card">
+            <h3>善於獨立思考</h3>
+            <p>我經常閱讀、學習，並將學習到的事物內化到我的邏輯裡，進行自己的獨立思考。這項能力在我的人生中幫助很大，我能夠以自己為中心，不受他人影響的去做自己喜歡的事。降低別人的評判對自己的影響對我來說非常重要。若嘗試去迎合每個人，最後受害的會是你自己。</p>
+          </div>
+          <div class="strength-card">
+            <h3>善用新事物</h3>
+            <p>人對於新事物的第一反應通常是恐懼與排斥，因為作為既得利益者，新的轉變和不確定性可能會導致既得利益的損失。我也同樣有這個想法。不同的是，我將對於新事物的接納以及學習當作我的優勢之一，所以每當新的事物導致改變時，我會選擇去接納他，在他人未起步時提早起跑。</p>
+          </div>
+          <div class="strength-card">
+            <h3>自律</h3>
+            <p>在高中時，我是學校的籃球隊隊長。作為非體優生組成的團隊，我們只能在課餘時間練球。初期和一些收體優生以及組體育班的學校比賽時，我們通常都輸80-100分。但是因為我和隊友們的努力，即使練習時間比他人少，在高二、三時我們贏過那些曾經痛宰我們的球隊，甚至拿到全國名次。我從那時起就染上了督促自己的習慣並且持續到現在，每當有空或放假時都會利用大部分的時間讓自己進步。</p>
+          </div>
+          <div class="strength-card">
+            <h3>願意認錯</h3>
+            <p>我爸是美國人，在我的成長過程中對我有許多影響。他教導我要勇於做不一樣的事，不要管別人的想法，所以前述的獨立思考可能也要歸因於他。在他教導我的所有事中，我認為最重要的就是"不要害怕認錯"。所有人都會犯錯。重要的是在犯錯時承認錯誤，而不是否認然後嘗試去掩蓋或是繼續做下去。若是我發現錯誤，或是我不懂，我會盡量明白地和你講，不去不懂裝懂或當作沒發生。這個網站是寫給我暑假想申請實習的公司看的，我希望你知道，我會在工作中很明白地去和你溝通我遇到的困難或犯的錯誤，試著做得更好。</p>
+          </div>
+          <div class="strength-card">
+            <h3>理性</h3>
+            <p>我自認是一個很理性的人。這部分主要體現在我解決問題的方式以及投資上。在遇到問題時，我會很冷靜地去思考在當下的情況以及考慮手邊可動用的資源，找出我認為的最佳解方，不被沉沒成本影響。對於在學校中思考問題以及分組報告時這個特質能幫助我提升效率跟品質，但最主要的優點是我自己在投資的時候會盡量去控制情緒對我的影響，在進行分析跟風險控管時排除情緒，去思考甚麼才是在我的風險耐受度下最好的做法。過去兩個多頭年，我將家教存到的薪水全部投入股市，在24年的績效翻倍，市值目前超過100萬。理性的決策和思考市我嘗試融入生活中各部分的一件事。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + FOOTER -->
+    <section id="contact-footer" class="contact-footer-section">
+      <div class="contact-footer-inner">
+        <div class="contact-wrapper">
+          <h2 class="heading-2">Contact Me</h2>
+          <p class="contact-subtitle">
+            有任何問題或合作機會？請透過下方方式與我聯繫。
+          </p>
+          <div class="social-contact-links">
+            <a href="https://twitter.com/CashPrinter3000" target="_blank" class="icon-btn">
+              <i class="fa-brands fa-x-twitter"></i>
+              <span>X (Twitter)</span>
+            </a>
+            <a href="https://instagram.com/bill.edwards_42" target="_blank" class="icon-btn">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="mailto:bill.edwards.workmail@gmail.com?subject=Hello" class="icon-btn">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+            <a href="tel:+886 965824304" class="icon-btn">
+              <i class="fa-solid fa-phone"></i>
+              <span>Phone</span>
+            </a>
+          </div>
+        </div>
+
+        <footer class="footer-dark">
+          <div class="footer-container">
+            <div class="footer-details">
+              <p>© 2025 Bill Edwards. All Rights Reserved.</p>
+              <p>Gmail: bill.edwards.workmail@gmail.com</p>
+              <p>Hyperlinks above may or may not work on certain devices.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- LENS CURSOR -->
+    <div class="lens-cursor"></div>
+
+    <!-- SCRIPTS WITH EXTRA DEBUG LOGS -->
+    <script>
+      console.log("[DEBUG] Attempting to load jQuery from unpkg + the older Lenis snippet...");
+    </script>
+
+    <!-- jQuery from unpkg -->
+    <script
+      src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Lenis v0.2.28 -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+
+    <!-- Initialize Lenis snippet -->
+    <script>
+      console.log("[DEBUG] Setting up the older Lenis snippet (0.2.28)...")
+      // This snippet references the older API
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 0.85,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      })
+
+      // We'll tie the pinned logic to 'scroll' event
+      lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        console.log("[Lenis 0.2.28] scroll:", scroll)
+        // Call our pinned horizontal logic:
+        handleStrengthScroll(scroll)
+      })
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+    </script>
+
+    <!-- main.js -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

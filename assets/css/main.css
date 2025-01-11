@@ -1,0 +1,581 @@
+/* --- GLOBAL RESETS --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Hide default cursor so lens-cursor can replace it */
+html, body, * {
+  cursor: none !important;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "El Messiri", "Noto Sans TC", sans-serif;
+  /* Normal scrolling; Lenis intercepts for smoothness. */
+  overflow: visible;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+/* Revert to your original flex layout */
+.nav-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;         /* vertical center everything in navbar */
+  justify-content: space-between; /* menu on one side, brand in the middle, or however you want */
+}
+
+/* KEY: ensure brand anchor is full height, so the logo can center within that 80px. */
+.brand {
+  display: flex;
+  align-items: center;
+  height: 100%; /* make the anchor as tall as .nav-container => 80px */
+}
+
+.logo {
+  max-height: 80px;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+}
+.menu-text {
+  margin-right: 10px;
+}
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+}
+.menu-line {
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 3px 0;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  transition: background-color 1.5s ease;
+}
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* --- FULL-SCREEN SECTIONS --- */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px; /* default offset below navbar */
+  box-sizing: border-box;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  background-color: #fdf9f5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+}
+.hero-content {
+  max-width: 600px;
+  margin-left: 2rem;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2em;
+  color: #c68e46;
+}
+.hero-content p {
+  font-size: 2rem;
+}
+.quote-author {
+  font-weight: 500;
+  margin-top: 1rem;
+  color: #777;
+}
+.hero-image-container {
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  width: 50vw;
+  height: 50vw;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+  z-index: 2;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- SERVICES SECTION (navy background) --- */
+.services-section {
+  background-color: #11224d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-inner {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.service-image-wrapper {
+  position: relative;
+  width: 99vw;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.service-text {
+  flex: 1 1 auto;
+  color: #c5d8ff;
+}
+.service-text h2 {
+  color: #7bb2f9;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.service-description-container {
+  max-width: 900px;
+  margin-left: 0;
+  margin-top: -1rem;
+  margin-right: auto;
+  font-size: 0.9rem;
+}
+.service-title {
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c5d8ff;
+}
+.service-text p {
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
+}
+.service-text .btn {
+  background-color: #7bb2f9;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+.service-text .btn:hover {
+  background-color: #96c3fa;
+}
+
+/* --- WHO WE ARE (VIDEO SECTION) --- */
+.video-section {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 48, 128, 0.4);
+}
+.video-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 2rem;
+  color: #fff;
+}
+.video-content .heading-2 {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.video-content p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Example gradient fade at top */
+.video-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, #11224d 0%, rgba(17,34,77,0) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+.video-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 170px;
+  background: linear-gradient(to bottom, rgba(253,249,245,0) 0%, #fdf9f5 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* STRENGTH OVERRIDES */
+#strength.strength-section {
+  height: 310vh; /* pinned scroll. Adjust as needed. */
+  padding-top: 0;
+  background-color: #fdf9f5;
+  overflow: visible;
+}
+.strength-sticky {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  overflow: hidden;
+}
+.strength-heading {
+  position: absolute;
+  top: 20px;
+  left: 2rem;
+  pointer-events: none;
+  transition: opacity 0.2s linear;
+}
+.strength-heading .heading-2 {
+  text-align: left;
+  font-size: 8rem;
+  margin: 0;
+  color: #c68e46;
+}
+.strength-scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  transform: translateX(0);
+  padding-left: 320px;  /* pushing first card so it doesn't overlap heading */
+  min-width: 2950px;   /* total width for your cards */
+}
+.strength-scroller::-webkit-scrollbar {
+  display: none;
+}
+.strength-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  min-height: 452px;
+  margin: 80px 1rem 0 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.strength-card h3 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: #c68e46;
+}
+.strength-card p {
+  margin: 0;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* CONTACT + FOOTER */
+.contact-footer-section {
+  background-color: #f5f5f5; /* subtle contrast vs main content */
+}
+
+/* Social icons container */
+.social-contact-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0rem;
+}
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+}
+.icon-btn i {
+  font-size: 1.4rem;
+}
+.icon-btn:hover {
+  opacity: 0.8;
+}
+
+.contact-footer-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.contact-wrapper {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 80px auto 0 auto; /* push this card down with margin-top:60px, center horizontally */
+  text-align: center;
+}
+.contact-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* 
+   FOOTER HEIGHT:
+   If you want more or less space in the footer, 
+   add min-height or adjust padding here:
+*/
+.footer-dark {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  height: 140px;
+
+  /* For example, to enforce a bigger or smaller minimum height: */
+  /* min-height: 100px; */
+  /* Or you can do height: 150px; if you want it fixed. */
+  margin-top: auto;
+}
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-details {
+  margin: 1rem 0;
+}
+.social-links a {
+  color: #fff;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+/* HEADINGS */
+.heading-2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* LENS CURSOR */
+.lens-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  width: 23px;  /* smaller circle size */
+  height: 23px; /* smaller circle size */
+  border-radius: 50%;
+  background: #fff;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease;
+  top: 0;
+  left: 0;
+}
+.lens-cursor.enlarge {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/* MID-SIZE SCREENS (<=1100px) */
+@media screen and (max-width: 1100px) {
+  .hero-content h1 {
+    font-size: 4.2rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  .service-image-wrapper {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 1.5rem;
+  }
+  .service-description-container {
+    font-size: 0.77rem;
+  }
+  .service-text h2 {
+    font-size: 2.5rem;
+  }
+  .service-text {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .service-title {
+    margin-top: 0;
+  }
+}
+
+/* EVEN NARROWER (<=900px) */
+@media screen and (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 4.2rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  .service-image-wrapper {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 1.5rem;
+  }
+  .service-description-container {
+    font-size: 0.7rem;
+  }
+  .service-text h2 {
+    font-size: 2rem;
+  }
+  .service-title {
+    margin-top: 0;
+  }
+  .video-content .heading-2 {
+    font-size: 4rem;
+  }
+  .video-content p {
+    font-size: 0.8rem;
+  }
+  .strength-heading .heading-2 {
+    font-size: 8rem;
+  }
+}
+
+/* MOBILE (<= 768px) */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.3rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .menu-button {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+    z-index: 998;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+
+    /* same smooth color transition */
+    transition: background-color 1.5s ease;
+  }
+
+  .nav-links.open li {
+    margin: 1rem 0;
+  }
+  .nav-links.open a {
+    font-size: 1.2rem;
+  }
+  .service-description-container {
+    font-size: 0.7rem;
+  }
+  .service-image-wrapper {
+    display: none;
+  }
+  .hero-image-container {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 20px;
+  }
+  .video-content .heading-2 {
+    font-size: 3rem;
+  }
+  .video-content p {
+    font-size: 0.7rem;
+  }
+  .strength-heading .heading-2 {
+    font-size: 6.8rem;
+  }
+}
