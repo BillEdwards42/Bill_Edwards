@@ -579,3 +579,19 @@ section {
     font-size: 6.8rem;
   }
 }
+
+/* --- OVERRIDE FOR TOUCH / COARSE POINTER DEVICES --- */
+@media (pointer: coarse), (hover: none) {
+  /* Let’s restore normal cursor for everything */
+  html, body, * {
+    cursor: auto !important;
+  }
+  /* Hide the custom lens-cursor entirely */
+  .lens-cursor {
+    display: none !important;
+  }
+
+  .strength-card {
+    width: 3600px;
+  }
+}
