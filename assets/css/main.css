@@ -4,54 +4,60 @@
 *::after {
   box-sizing: border-box;
 }
-/* Hide default cursor so lens-cursor can replace it */
 html, body, * {
-  cursor: none !important;
+  cursor: none !important; /* lens cursor usage */
 }
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "El Messiri", "Noto Sans TC", sans-serif;
-  /* Normal scrolling; Lenis intercepts for smoothness. */
   overflow: visible;
 }
 
-/* --- NAVBAR --- */
+/* BILINGUAL TOGGLE */
+.lang-en { display: inline; }
+.lang-zh { display: none; }
+body.chinese-mode .lang-en { display: none; }
+body.chinese-mode .lang-zh { display: inline; }
+
+/* NAVBAR (69px tall) */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  /* Here is your custom height */
+  height: 69px;
   z-index: 999;
-  background-color: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #fdf9f5; 
   color: #333;
+  box-shadow: none;
+  transition: transform 0.4s ease-out;
 }
-/* Revert to your original flex layout */
+.navbar.nav-hidden {
+  transform: translateY(-100%);
+}
 .nav-container {
   position: relative;
   width: 90%;
   max-width: 1200px;
+  /* Also 69px to match the navbar container height */
   height: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: center;         /* vertical center everything in navbar */
-  justify-content: space-between; /* menu on one side, brand in the middle, or however you want */
+  align-items: center; /* vertical center in 69px */
+  justify-content: space-between;
 }
-
-/* KEY: ensure brand anchor is full height, so the logo can center within that 80px. */
 .brand {
   display: flex;
   align-items: center;
-  height: 100%; /* make the anchor as tall as .nav-container => 80px */
+  height: 100%;
 }
-
 .logo {
-  max-height: 80px;
+  /* So the logo fits in 69px height */
+  max-height: 69px;
 }
-
 .menu-button {
   display: none;
   background: none;
@@ -74,7 +80,10 @@ body {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  transition: background-color 1.5s ease;
+}
+.nav-links li {
+  display: flex;
+  align-items: center;
 }
 .nav-links a {
   text-decoration: none;
@@ -85,16 +94,17 @@ body {
   opacity: 0.7;
 }
 
-/* --- FULL-SCREEN SECTIONS --- */
+/* FULL-SCREEN SECTIONS: offset 69px for the navbar */
 section {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding-top: 80px; /* default offset below navbar */
+  /* use 69px as offset instead of 50px */
+  padding-top: 69px;
   box-sizing: border-box;
 }
 
-/* --- HERO SECTION --- */
+/* HERO SECTION */
 .hero-section {
   background-color: #fdf9f5;
   display: flex;
@@ -108,13 +118,13 @@ section {
   z-index: 1;
 }
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   line-height: 1.2em;
   color: #c68e46;
 }
 .hero-content p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .quote-author {
   font-weight: 500;
@@ -138,80 +148,77 @@ section {
   object-fit: cover;
 }
 
-/* --- SERVICES SECTION (navy background) --- */
-.services-section {
+/* DESCRIPTION SECTION (was services) */
+.description-section {
   background-color: #11224d;
+  padding: 4rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.service-inner {
+.description-inner {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
 }
-.service-image-wrapper {
-  position: relative;
-  width: 99vw;
-  min-width: 250px;
-  max-width: 300px;
-  border-radius: 20px;
+.description-image-wrapper {
+  width: 300px;
+  flex-shrink: 0;
+  border-radius: 12px;
   overflow: hidden;
   box-sizing: border-box;
 }
-.service-image-wrapper img {
+.description-image-wrapper img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
-.service-text {
-  flex: 1 1 auto;
+.description-text {
+  flex: 1;
   color: #c5d8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.service-text h2 {
+.description-big-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
   color: #7bb2f9;
-  font-size: 3rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
 }
-.service-description-container {
-  max-width: 900px;
-  margin-left: 0;
-  margin-top: -1rem;
-  margin-right: auto;
-  font-size: 0.9rem;
-}
-.service-title {
-  margin-top: -1.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+.description-title {
+  font-size: 1.2rem;
   font-weight: 500;
+  margin-bottom: 1rem;
   color: #c5d8ff;
 }
-.service-text p {
-  line-height: 1.6;
-  margin-bottom: 2.2rem;
+.description-text-container {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
-.service-text .btn {
+.description-text .btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
   background-color: #7bb2f9;
   color: #fff;
-  padding: 0.6rem 1rem;
   border-radius: 4px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
-.service-text .btn:hover {
+.description-text .btn:hover {
   background-color: #96c3fa;
 }
 
-/* --- WHO WE ARE (VIDEO SECTION) --- */
+/* WHO WE ARE (VIDEO SECTION) */
 .video-section {
   background-color: transparent;
   display: flex;
@@ -250,7 +257,7 @@ section {
 }
 .video-content .heading-2 {
   color: #fff;
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
 }
 .video-content p {
@@ -258,15 +265,13 @@ section {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-
-/* Example gradient fade at top */
 .video-section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 120px;
   background: linear-gradient(to bottom, #11224d 0%, rgba(17,34,77,0) 100%);
   z-index: 5;
   pointer-events: none;
@@ -283,17 +288,18 @@ section {
   pointer-events: none;
 }
 
-/* STRENGTH OVERRIDES */
+/* STRENGTH SECTION (PINNED, HORIZONTAL SCROLL) */
 #strength.strength-section {
-  height: 310vh; /* pinned scroll. Adjust as needed. */
+  height: 310vh;
   padding-top: 0;
   background-color: #fdf9f5;
   overflow: visible;
 }
 .strength-sticky {
   position: sticky;
-  top: 80px;
-  height: calc(100vh - 80px);
+  /* top: 69px so it accounts for the navbar's new height */
+  top: 69px;
+  height: calc(100vh - 69px);
   width: 100%;
   overflow: hidden;
 }
@@ -319,8 +325,8 @@ section {
   overflow-x: hidden;
   scrollbar-width: none;
   transform: translateX(0);
-  padding-left: 320px;  /* pushing first card so it doesn't overlap heading */
-  min-width: 2950px;   /* total width for your cards */
+  padding-left: 320px;
+  min-width: 2950px;
 }
 .strength-scroller::-webkit-scrollbar {
   display: none;
@@ -352,10 +358,8 @@ section {
 
 /* CONTACT + FOOTER */
 .contact-footer-section {
-  background-color: #f5f5f5; /* subtle contrast vs main content */
+  background-color: #f5f5f5;
 }
-
-/* Social icons container */
 .social-contact-links {
   display: flex;
   gap: 1rem;
@@ -376,7 +380,6 @@ section {
 .icon-btn:hover {
   opacity: 0.8;
 }
-
 .contact-footer-inner {
   width: 100%;
   display: flex;
@@ -389,7 +392,7 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 2rem;
   max-width: 600px;
-  margin: 80px auto 0 auto; /* push this card down with margin-top:60px, center horizontally */
+  margin: 80px auto 0 auto;
   text-align: center;
 }
 .contact-subtitle {
@@ -398,22 +401,12 @@ section {
   margin: 1rem 0;
   text-align: center;
 }
-
-/* 
-   FOOTER HEIGHT:
-   If you want more or less space in the footer, 
-   add min-height or adjust padding here:
-*/
 .footer-dark {
   width: 100%;
   background-color: #222;
   color: #fff;
   text-align: center;
   height: 140px;
-
-  /* For example, to enforce a bigger or smaller minimum height: */
-  /* min-height: 100px; */
-  /* Or you can do height: 150px; if you want it fixed. */
   margin-top: auto;
 }
 .footer-container {
@@ -423,14 +416,6 @@ section {
 }
 .footer-details {
   margin: 1rem 0;
-}
-.social-links a {
-  color: #fff;
-  margin: 0 0.75rem;
-  text-decoration: none;
-}
-.social-links a:hover {
-  opacity: 0.7;
 }
 
 /* HEADINGS */
@@ -444,8 +429,8 @@ section {
   pointer-events: none;
   position: fixed;
   z-index: 9999;
-  width: 23px;  /* smaller circle size */
-  height: 23px; /* smaller circle size */
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   background: #fff;
   mix-blend-mode: difference;
@@ -461,73 +446,38 @@ section {
 /* MID-SIZE SCREENS (<=1100px) */
 @media screen and (max-width: 1100px) {
   .hero-content h1 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
-  .service-image-wrapper {
+  .description-image-wrapper {
     width: 100%;
     max-width: 280px;
     margin: 0 auto 1.5rem;
-  }
-  .service-description-container {
-    font-size: 0.77rem;
-  }
-  .service-text h2 {
-    font-size: 2.5rem;
-  }
-  .service-text {
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-  .service-title {
-    margin-top: 0;
   }
 }
 
 /* EVEN NARROWER (<=900px) */
 @media screen and (max-width: 900px) {
   .hero-content h1 {
-    font-size: 4.2rem;
+    font-size: 3rem;
   }
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  .service-image-wrapper {
+  .description-image-wrapper {
     width: 100%;
     max-width: 200px;
     margin: 0 auto 1.5rem;
   }
-  .service-description-container {
-    font-size: 0.7rem;
-  }
-  .service-text h2 {
-    font-size: 2rem;
-  }
-  .service-title {
-    margin-top: 0;
-  }
   .video-content .heading-2 {
-    font-size: 4rem;
-  }
-  .video-content p {
-    font-size: 0.8rem;
-  }
-  .strength-heading .heading-2 {
-    font-size: 8rem;
+    font-size: 3rem;
   }
 }
 
 /* MOBILE (<= 768px) */
 @media screen and (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 3.3rem;
-  }
-  .hero-content p {
-    font-size: 1.1rem;
-  }
   .menu-button {
     display: block;
   }
@@ -539,58 +489,39 @@ section {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 80px;
+    /* place the menu below the 69px navbar */
+    top: 69px;
     left: 0;
     width: 100%;
     height: 80vh;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(253,249,245,0.96);
     backdrop-filter: blur(5px);
     z-index: 998;
     padding: 2rem 1rem;
     overflow-y: auto;
-
-    /* same smooth color transition */
-    transition: background-color 1.5s ease;
   }
-
   .nav-links.open li {
     margin: 1rem 0;
   }
   .nav-links.open a {
     font-size: 1.2rem;
   }
-  .service-description-container {
-    font-size: 0.7rem;
-  }
-  .service-image-wrapper {
+  .description-image-wrapper {
     display: none;
   }
-  .hero-image-container {
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 20px;
-  }
   .video-content .heading-2 {
-    font-size: 3rem;
-  }
-  .video-content p {
-    font-size: 0.7rem;
-  }
-  .strength-heading .heading-2 {
-    font-size: 6.8rem;
+    font-size: 2.6rem;
   }
 }
 
-/* --- OVERRIDE FOR TOUCH / COARSE POINTER DEVICES --- */
+/* OVERRIDE FOR TOUCH / COARSE POINTER DEVICES */
 @media (pointer: coarse), (hover: none) {
-  /* Let’s restore normal cursor for everything */
   html, body, * {
     cursor: auto !important;
   }
-  /* Hide the custom lens-cursor entirely */
   .lens-cursor {
     display: none !important;
   }
-
   .strength-card {
     width: 360px;
   }

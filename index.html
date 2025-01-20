@@ -1,21 +1,21 @@
-<!-- git add
+<!-- git add .
 git commit -m "Update"
 git push -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link
-    rel="icon"
-    type="image/png"
-    href="./assets/images/personal_logo.png"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/personal_logo.png"
     />
     <title>Bill's hub</title>
-    <meta
-      name="description"
-      content="My website. Cool stuff."
-    />
+    <meta name="description" content="My website. Cool stuff." />
     <meta content="website" property="og:type" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,11 +37,10 @@ git push -->
   </head>
 
   <body>
+    <!-- NAVBAR (69px tall) -->
     <nav class="navbar">
       <div class="nav-container">
-        <!-- everything stays the same; brand is left, nav-links right, 
-             the main difference is that .nav-container is flex 
-             and brand anchor is 100% high -->
+        <!-- Brand (logo) -->
         <a href="#hero" class="brand">
           <img
             src="./assets/images/personal_logo.png"
@@ -50,6 +49,7 @@ git push -->
           />
         </a>
 
+        <!-- Hamburger Menu (mobile) -->
         <button class="menu-button" aria-label="Open Menu">
           <span class="menu-text">menu</span>
           <div class="menu-icon">
@@ -59,8 +59,19 @@ git push -->
         </button>
 
         <ul class="nav-links">
-          <li><a href="https://billedwards42.github.io/Bitwise/">Blog</a></li>
-          <li><a href="#contact-footer" class="contact-link">Contact</a></li>
+          <li>
+            <a href="https://billedwards42.github.io/Bitwise/">Blog</a>
+          </li>
+          <li>
+            <a href="#contact-footer" class="contact-link">Contact</a>
+          </li>
+          <!-- Language Toggle -->
+          <li>
+            <a href="#" class="lang-toggle icon-btn">
+              <i class="fa-solid fa-language"></i>
+              <span></span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -68,9 +79,17 @@ git push -->
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
       <div class="hero-content">
-        <h1>千里之行，<br />始於足下</h1>
-        <p class="quote-author">— 老子</p>
+        <!-- Bilingual heading -->
+        <h1>
+          <span class="lang-en">A journey of a thousand miles,<br/>begins with a single step</span>
+          <span class="lang-zh">千里之行，<br/>始於足下</span>
+        </h1>
+        <p class="quote-author">
+          <span class="lang-en">— Laozi</span>
+          <span class="lang-zh">— 老子</span>
+        </p>
       </div>
+
       <div class="hero-image-container">
         <img
           src="./assets/images/78885_0.jpg"
@@ -80,27 +99,62 @@ git push -->
       </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services-section">
-      <div class="service-inner">
-        <div class="service-image-wrapper">
+    <!-- DESCRIPTION SECTION (was "Services") -->
+    <section id="description" class="description-section">
+      <div class="description-inner">
+        <div class="description-image-wrapper">
           <img
             src="./assets/images/self.jpg"
-            alt="Services"
+            alt="Description"
           />
         </div>
-        <div class="service-text">
-          <h2 class="service-big-title">艾威朋 Bill Edwards</h2>
-          <p class="service-title">國立中正大學 企管系大三</p>
-          <p class="service-description-container">
-            嗨，我是艾威朋。如果你想獲得我的履歷或相關資料，點選下方的Resume鍵。我要利用你被這個超酷網站吸引的時間來和你簡單的講講你在履歷上找不到的東西。在我的長大過程中，我常常接觸網路，也好奇網路是如何運作的。但是，從國高中到大學都是走一類，學商的我，在學校並沒有甚麼機會接觸科技相關知識。上了大學後，自由時間變多，我開始利用這些時間學習科技的運作方式。網路信號是如何運作、資料中心是如何儲存世界上不同的資訊、電腦的內部是怎麼運作的，這些資訊我都問過不只一遍。除了基礎資訊以外，我也從最容易讓一般人學習的軟體能力開始學習。最開始學習基礎python，到後來開始專精資料分析，在學校修習資工系的程式設計學C，額外去學html, css等網站設計語言並進行各種不同的個人project，我對科技有了更多的理解。在資料分析、網頁設計等軟體技能之外，2022年ChatGPT的出現也激起了我對AI的興趣。我開始去學習在AI背後運作的深度學習，去了解這些模型是如何後過資料去訓練，資料中心如何去透過大量的GPU cluster連結進行運算，我們在ChatGPT網站上的query是如何在資料中心進行inference後出現在我們的螢幕上，自己也透過pytorch或是tensorflow去訓練了幾個AI模型。科技對我來講是推動世界進步的力量，所以學習這些新科技對我而言就是了解世界最新的狀態。透過使用AI，將新科技的使用融入到我的工作中，我的工作能力和效率都得到了極大的提升。希望這些有讓你更了解我，也希望你可以滑完這個網頁，我花了很大的力氣確保各個螢幕尺寸的瀏覽體驗都很好。除了這個網站我還寫了一個部落格，上方的nav bar有連結，請繼續往下滑。
+
+        <div class="description-text">
+          <h2 class="description-big-title">
+            <span class="lang-en">Bill Edwards</span>
+            <span class="lang-zh">艾威朋</span>
+          </h2>
+
+          <p class="description-title">
+            <span class="lang-en">
+              National Chung Cheng University, Junior in Business Administration
+            </span>
+            <span class="lang-zh">
+              國立中正大學 企業管理學系大三
+            </span>
           </p>
-          <a
-            href="./assets/docs/Bill_resume.pdf"
-            download="Bill_resume.pdf"
-            class="btn"
+
+          <p class="description-text-container">
+            <span class="lang-en">
+              Hello, I'm Bill. If you'd like my resume, click "Resume" to download.<br/>
+              If you don’t have time to read, here are some quick highlights:<br/><br/>
+              1. Self-taught data science; multiple Udemy courses & personal projects.<br/>
+              2. GPA 3.97/4.3; grade of 97 in CS dept's programming design, 2nd place.<br/>
+              3. Experienced in deep learning. Used TensorFlow to train stock prediction AI models.<br/>
+              4. Incorporated quantitative analysis with finance, crafted dashboards for financial reports.<br/>
+              5. 3rd place in national intercollege 3x3 basketball tournament, great at teamwork.<br/>
+              Scroll down for more info below!
+            </span>
+
+            <span class="lang-zh">
+              嗨，我是艾威朋。如果你想獲得我的履歷，點選 "Resume" 鍵下載。<br/>
+              以下是我的一些亮點：<br/><br/>
+              1. 自學資料科學，多張Udemy證書和個人專案經驗。<br/>
+              2. GPA 3.97/4.3；資工系必修之程式設計97分。<br/>
+              3. 具有深度學習經驗，使用TensorFlow訓練股價預測模型。<br/>
+              4. 參與多場金融競賽，結合量化分析並得名。有替公司財報製作Dashboard的經驗(非正式)。<br/>
+              5. 大專院校3x3籃球錦標賽獲得全國季軍，擅長團隊合作。<br/>
+              繼續往下滑查看更多資訊！
+            </span>
+          </p>
+
+          <a 
+            href="./assets/docs/Bill_resume_eng.pdf"
+            download="Bill_resume_eng.pdf"
+            class="btn resume-btn"
           >
-            Resume
+            <span class="lang-en">Resume</span>
+            <span class="lang-zh">履歷下載</span>
           </a>
         </div>
       </div>
@@ -119,8 +173,18 @@ git push -->
         <div class="video-overlay"></div>
       </div>
       <div class="video-content">
-        <h2 class="heading-2">One day, or day one</h2>
-        <p>這是我一直抱持的理念。與其每天抱怨自己能力不足，不如從今天開始改變，將對未來的想像變成現實。</p>
+        <h2 class="heading-2">
+          <span class="lang-en">One day, or day one</span>
+          <span class="lang-zh">One day, or day one</span>
+        </h2>
+        <p>
+          <span class="lang-en">
+            This is my guiding philosophy: instead of imagining about the future, I start the change today.
+          </span>
+          <span class="lang-zh">
+            這是我一直抱持的理念，與其每天抱怨自己不足，不如從今天開始改變。
+          </span>
+        </p>
       </div>
     </section>
 
@@ -128,29 +192,81 @@ git push -->
     <section id="strength" class="strength-section">
       <div class="strength-sticky">
         <div class="strength-heading">
-          <h2 class="heading-2">特點</h2>
+          <h2 class="heading-2">
+            <span class="lang-en">My Strengths</span>
+            <span class="lang-zh">特點</span>
+          </h2>
         </div>
         <div class="strength-scroller">
-          <!-- 10 big cards to force horizontal overflow -->
           <div class="strength-card">
-            <h3>善於獨立思考</h3>
-            <p>我經常閱讀、學習，並將學習到的事物內化到我的邏輯裡，進行自己的獨立思考。這項能力在我的人生中幫助很大，我能夠以自己為中心，不受他人影響的去做自己喜歡的事。降低別人的評判對自己的影響對我來說非常重要。若嘗試去迎合每個人，最後受害的會是你自己。</p>
+            <h3>
+              <span class="lang-en">Independent Thinking</span>
+              <span class="lang-zh">善於獨立思考</span>
+            </h3>
+            <p>
+              <span class="lang-en">
+                I regularly read and study, internalizing new ideas. This habit helped me develop my own indipendent thinking, benefiting me throught my life by having my own opinion.
+              </span>
+              <span class="lang-zh">
+                我時常閱讀和學習，內化新點子。這項習慣刺激了我的獨立思考，使我能夠產生更多自己的意見和想法，幫助很大。
+              </span>
+            </p>
           </div>
           <div class="strength-card">
-            <h3>善用新事物</h3>
-            <p>人對於新事物的第一反應通常是恐懼與排斥，因為作為既得利益者，新的轉變和不確定性可能會導致既得利益的損失。我也同樣有這個想法。不同的是，我將對於新事物的接納以及學習當作我的優勢之一，所以每當新的事物導致改變時，我會選擇去接納他，在他人未起步時提早起跑。</p>
+            <h3>
+              <span class="lang-en">Embracing Novelty</span>
+              <span class="lang-zh">善用新事物</span>
+            </h3>
+            <p>
+              <span class="lang-en">
+                Many fear new things due to uncertainty, rejecting to change because of the fear. I adopt to new things and learn them early, gaining a head start before most people and use the head start as my edge.
+              </span>
+              <span class="lang-zh">
+                許多人因為不確定性而害怕新事物，這份害怕導致他們拒絕改變。我會去迎合改變，在他人還沒起跑時拔得頭籌，將這份能力轉化為自己的優勢。
+              </span>
+            </p>
           </div>
           <div class="strength-card">
-            <h3>自律</h3>
-            <p>在高中時，我是學校的籃球隊隊長。作為非體優生組成的團隊，我們只能在課餘時間練球。初期和一些收體優生以及組體育班的學校比賽時，我們通常都輸80-100分。但是因為我和隊友們的努力，即使練習時間比他人少，在高二、三時我們贏過那些曾經痛宰我們的球隊，甚至拿到全國名次。我從那時起就染上了督促自己的習慣並且持續到現在，每當有空或放假時都會利用大部分的時間讓自己進步。</p>
+            <h3>
+              <span class="lang-en">Self-Discipline</span>
+              <span class="lang-zh">自律</span>
+            </h3>
+            <p>
+              <span class="lang-en">
+                As a high school basketball captain, I learned how consistent effort leads to big improvements. I carried this learning ever since, and stride to better my self everyday.
+              </span>
+              <span class="lang-zh">
+                我在高中擔任籃球隊長時，體悟到長時間的努力能帶來極大的成果。高中畢業後，我將這個經驗銘記在心，並每天想辦法多進步一點。
+              </span>
+            </p>
           </div>
           <div class="strength-card">
-            <h3>願意認錯</h3>
-            <p>我爸是美國人，在我的成長過程中對我有許多影響。他教導我要勇於做不一樣的事，不要管別人的想法，所以前述的獨立思考可能也要歸因於他。在他教導我的所有事中，我認為最重要的就是"不要害怕認錯"。所有人都會犯錯。重要的是在犯錯時承認錯誤，而不是否認然後嘗試去掩蓋或是繼續做下去。若是我發現錯誤，或是我不懂，我會盡量明白地和你講，不去不懂裝懂或當作沒發生。這個網站是寫給我暑假想申請實習的公司看的，我希望你知道，我會在工作中很明白地去和你溝通我遇到的困難或犯的錯誤，試著做得更好。</p>
+            <h3>
+              <span class="lang-en">Willingness to Admit Mistakes</span>
+              <span class="lang-zh">願意認錯</span>
+            </h3>
+            <p>
+              <span class="lang-en">
+                My father taught me not to fear being different or admitting mistakes. If I don’t know something, I say so openly.
+              </span>
+              <span class="lang-zh">
+                我的父親教導我永遠不要害怕承認錯誤。當我不知道答案時，我會盡可能地坦承並和你說我不知道，或是我犯錯了。
+              </span>
+            </p>
           </div>
           <div class="strength-card">
-            <h3>理性</h3>
-            <p>我自認是一個很理性的人。這部分主要體現在我解決問題的方式以及投資上。在遇到問題時，我會很冷靜地去思考在當下的情況以及考慮手邊可動用的資源，找出我認為的最佳解方，不被沉沒成本影響。對於在學校中思考問題以及分組報告時這個特質能幫助我提升效率跟品質，但最主要的優點是我自己在投資的時候會盡量去控制情緒對我的影響，在進行分析跟風險控管時排除情緒，去思考甚麼才是在我的風險耐受度下最好的做法。過去兩個多頭年，我將家教存到的薪水全部投入股市，在24年的績效翻倍，市值目前超過100萬。理性的決策和思考是我嘗試融入生活中各部分的一件事。</p>
+            <h3>
+              <span class="lang-en">Rational</span>
+              <span class="lang-zh">理性</span>
+            </h3>
+            <p>
+              <span class="lang-en">
+                I keep calm when solving problems, focusing on resources at hand & best solutions without letting my emotions rule me. This has benifitted me greatly on my investments and problem solving.
+              </span>
+              <span class="lang-zh">
+                在解決問題時，我會冷靜考慮手邊的資源以及最佳的解法，不讓我的情緒去左右我的決策。這對於我在問題解決以及投資上助益極大。
+              </span>
+            </p>
           </div>
         </div>
       </div>
@@ -160,20 +276,36 @@ git push -->
     <section id="contact-footer" class="contact-footer-section">
       <div class="contact-footer-inner">
         <div class="contact-wrapper">
-          <h2 class="heading-2">Contact Me</h2>
+          <h2 class="heading-2">
+            <span class="lang-en">Contact Me</span>
+            <span class="lang-zh">聯繫我</span>
+          </h2>
           <p class="contact-subtitle">
-            有任何問題或合作機會？請透過下方方式與我聯繫。
+            <span class="lang-en">Questions or collaboration? Reach me below:</span>
+            <span class="lang-zh">有任何問題或合作機會？歡迎與我聯繫：</span>
           </p>
+
           <div class="social-contact-links">
-            <a href="https://twitter.com/CashPrinter3000" target="_blank" class="icon-btn">
+            <a
+              href="https://twitter.com/CashPrinter3000"
+              target="_blank"
+              class="icon-btn"
+            >
               <i class="fa-brands fa-x-twitter"></i>
               <span>X (Twitter)</span>
             </a>
-            <a href="https://instagram.com/bill.edwards_42" target="_blank" class="icon-btn">
+            <a
+              href="https://instagram.com/bill.edwards_42"
+              target="_blank"
+              class="icon-btn"
+            >
               <i class="fa-brands fa-instagram"></i>
               <span>Instagram</span>
             </a>
-            <a href="mailto:bill.edwards.workmail@gmail.com?subject=Hello" class="icon-btn">
+            <a
+              href="mailto:bill.edwards.workmail@gmail.com?subject=Hello"
+              class="icon-btn"
+            >
               <i class="fa-solid fa-envelope"></i>
               <span>Email</span>
             </a>
@@ -216,33 +348,31 @@ git push -->
 
     <!-- Initialize Lenis snippet -->
     <script>
-      console.log("[DEBUG] Setting up the older Lenis snippet (0.2.28)...")
-      // This snippet references the older API
+      console.log("[DEBUG] Setting up the older Lenis snippet (0.2.28)...");
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
+        direction: "vertical",
+        gestureDirection: "vertical",
         smooth: true,
         mouseMultiplier: 0.85,
         smoothTouch: false,
         touchMultiplier: 2,
         infinite: false,
-      })
+      });
 
       // We'll tie the pinned logic to 'scroll' event
-      lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-        console.log("[Lenis 0.2.28] scroll:", scroll)
-        // Call our pinned horizontal logic:
-        handleStrengthScroll(scroll)
-      })
+      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+        console.log("[Lenis 0.2.28] scroll:", scroll);
+        handleStrengthScroll(scroll);
+      });
 
       function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+        lenis.raf(time);
+        requestAnimationFrame(raf);
       }
 
-      requestAnimationFrame(raf)
+      requestAnimationFrame(raf);
     </script>
 
     <!-- main.js -->
