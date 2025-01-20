@@ -525,4 +525,9 @@ section {
   .strength-card {
     width: 360px;
   }
+  .description-text-container {
+    font-size: 0.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
 }
