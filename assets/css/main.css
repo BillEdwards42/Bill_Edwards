@@ -506,6 +506,14 @@ section {
   .nav-links.open a {
     font-size: 1.2rem;
   }
+  .description-text-container {
+    font-size: 0.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .hero-image-container {
+    bottom: -10px;
+  }
   .description-image-wrapper {
     display: none;
   }
@@ -530,4 +538,9 @@ section {
     line-height: 1.2;
     margin-bottom: 1rem;
   }
+  .hero-image-container {
+    bottom: -10px;
+  }
+
+  
 }
