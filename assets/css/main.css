@@ -338,7 +338,7 @@ section {
    for strength. Gradients are used to fade the top and bottom.
    =================================================== */
 .mega-scroll-section { 
-  height: 680vh; 
+  height: 600vh; 
 }
 .mega-sticky {
   position: sticky;
@@ -931,11 +931,11 @@ body.modal-open .navbar {
       padding: 1rem;
     }
     .card-large {
-      font-size: 3.1rem;
+      font-size: 2.8rem;
     }
     
     .card-small {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     .personal-details {
       font-size: 0.9rem;

@@ -186,11 +186,11 @@ if (langToggleBtn) {
     const resumeBtn = document.querySelector(".resume-btn");
     if (resumeBtn) {
       if (document.body.classList.contains("chinese-mode")) {
-        resumeBtn.href = "./assets/docs/Bill_resume_chi.pdf";
-        resumeBtn.download = "Bill_resume_chi.pdf";
+        resumeBtn.href = "./assets/docs/Bill_chiCV.pdf";
+        resumeBtn.download = "Bill_chiCV.pdf";
       } else {
-        resumeBtn.href = "./assets/docs/Bill_resume_eng.pdf";
-        resumeBtn.download = "Bill_resume_eng.pdf";
+        resumeBtn.href = "./assets/docs/Bill_engCV.pdf";
+        resumeBtn.download = "Bill_engCV.pdf";
       }
     }
   });
