@@ -25,11 +25,7 @@ git push -->
 
     <!-- (Optional) Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;500;700&display=swap"
       rel="stylesheet"
@@ -89,7 +85,6 @@ git push -->
           <span class="lang-zh">— 老子</span>
         </p>
       </div>
-
       <div class="hero-image-container">
         <img
           src="./assets/images/78885_0.jpg"
@@ -99,177 +94,426 @@ git push -->
       </div>
     </section>
 
-    <!-- DESCRIPTION SECTION (was "Services") -->
-    <section id="description" class="description-section">
-      <div class="description-inner">
-        <div class="description-image-wrapper">
-          <img
-            src="./assets/images/self.jpg"
-            alt="Description"
-          />
+    <!-- New Stats/Dashboard Section -->
+    <section id="stats" class="stats-section">
+      <div class="stats-container">
+        <!-- Left Column: Personal Info -->
+        <div class="stats-left">
+          <div class="personal-info">
+            <img src="./assets/images/aime.jpg" alt="Bill Edwards" class="stats-image" />
+            <ul class="personal-details">
+              <li><strong><span class="lang-en">Name: </span><span class="lang-zh">名稱: </span></strong><span class="lang-en">Bill Edwards</span><span class="lang-zh">艾威朋</span></li>
+              <li><strong><span class="lang-en">Nationality: </span><span class="lang-zh">國籍: </span></strong><span class="lang-en">USA/R.O.C.</span><span class="lang-zh">美國/臺灣</span></li>
+              <li><strong><span class="lang-en">Age: </span><span class="lang-zh">年齡: </span></strong><span class="lang-en">21</span><span class="lang-zh">21</span></li>
+              <li><strong><span class="lang-en">School: </span><span class="lang-zh">學校: </span></strong><span class="lang-en">Cheng Chung University</span><span class="lang-zh">國立中正大學</span></li>
+              <!-- Add additional details as desired -->
+            </ul>
+          </div>
         </div>
-
-        <div class="description-text">
-          <h2 class="description-big-title">
-            <span class="lang-en">Bill Edwards</span>
-            <span class="lang-zh">艾威朋</span>
-          </h2>
-
-          <p class="description-title">
-            <span class="lang-en">
-              National Chung Cheng University, Junior in Business Administration
-            </span>
-            <span class="lang-zh">
-              國立中正大學 企業管理學系大三
-            </span>
-          </p>
-
-          <p class="description-text-container">
-            <span class="lang-en">
-              Hello, I'm Bill. If you'd like my resume, click "Resume" to download.<br/>
-              If you don’t have time to read, here are some quick highlights:<br/><br/>
-              1. Self-taught data science; multiple Udemy courses & personal projects.<br/>
-              2. GPA 3.97/4.3; grade of 97 in CS dept's programming design, 2nd place.<br/>
-              3. Experienced in deep learning. Used TensorFlow to train stock prediction AI models.<br/>
-              4. Incorporated quantitative analysis with finance, crafted dashboards for financial reports.<br/>
-              5. 3rd place in national intercollege 3x3 basketball tournament, great at teamwork.<br/><br/>
-              Scroll down for more info below!
-            </span>
-
-            <span class="lang-zh">
-              嗨，我是艾威朋。如果你想獲得我的履歷，點選 "Resume" 鍵下載。<br/>
-              以下是我的一些亮點：<br/><br/>
-              1. 自學資料科學，多張Udemy證書和個人專案經驗。<br/>
-              2. GPA 3.97/4.3；資工系必修之程式設計97分。<br/>
-              3. 具有深度學習經驗，使用TensorFlow訓練股價預測模型。<br/>
-              4. 參與多場金融競賽，結合量化分析並得名。有替公司財報製作Dashboard的經驗(非正式)。<br/>
-              5. 大專院校3x3籃球錦標賽獲得全國季軍，擅長團隊合作。<br/><br/>
-              繼續往下滑查看更多資訊！
-            </span>
-          </p>
-
-          <a 
-            href="./assets/docs/Bill_resume_eng.pdf"
-            download="Bill_resume_eng.pdf"
-            class="btn resume-btn"
-          >
-            <span class="lang-en">Resume</span>
-            <span class="lang-zh">履歷下載</span>
-          </a>
+        <!-- Right Column: Dashboard Metrics -->
+        <div class="stats-right">
+          <!-- Upper Row: Key Metrics (Bar Chart–like Cards) -->
+          <div class="stats-row">
+            <!-- GPA Card -->
+            <div class="stats-card" style="--card-bg-color: #DADAE3; --card-text-color: #1F1F22;">
+              <div class="card-content">
+                <span class="card-large">3.97</span>
+                <span class="card-small">
+                  <span class="lang-en">/4.3 of GPA</span>
+                  <span class="lang-zh">/4.3 的 GPA</span>
+                </span>
+              </div>
+            </div>
+            <!-- Course Ranking Card -->
+            <div class="stats-card" style="--card-bg-color: #E5E5EA; --card-text-color: #3A3A3A;">
+              <div class="card-content">
+                <span class="card-large">2</span>
+                <span class="card-small">
+                  <span class="lang-en">/101 in CS Dept's Class</span>
+                  <span class="lang-zh">資工系課程排名</span>
+                </span>
+              </div>
+            </div>
+            <!-- AI Experience Card -->
+            <div class="stats-card" style="--card-bg-color: #F5F5F7; --card-text-color: #1D1D1F;">
+              <div class="card-content">
+                <span class="card-large">1500+</span>
+                <span class="card-small">
+                  <span class="lang-en">hours self learning</span>
+                  <span class="lang-zh">小時自學</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <!-- Experience Card 1 -->
+            <div class="stats-card" style="--card-bg-color: #D1D1D6; --card-text-color: #1C1C1E;">
+              <div class="card-content">
+                <span class="card-large">AI</span>
+                <span class="card-small">
+                  <span class="lang-en">Model Training</span>
+                  <span class="lang-zh">模型訓練</span>
+                </span>
+              </div>
+            </div>
+            <!-- Experience Card 2 -->
+            <div class="stats-card" style="--card-bg-color: #E5E5EA; --card-text-color: #3A3A3A;">
+              <div class="card-content">
+                <span class="card-large">Quant.</span>
+                <span class="card-small">
+                  <span class="lang-en">Finance</span>
+                  <span class="lang-zh">量化金融</span>
+                </span>
+              </div>
+            </div>
+            <!-- Experience Card 3 -->
+            <div class="stats-card" style="--card-bg-color: #F5F5F7; --card-text-color: #1D1D1F;">
+              <div class="card-content">
+                <span class="card-large">Dash.</span>
+                <span class="card-small">
+                  <span class="lang-en">Crafting</span>
+                  <span class="lang-zh">儀表板設計</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Resume Button (Full Width) -->
+          <div class="stats-resume">
+            <a href="./assets/docs/Bill_resume_eng.pdf" download="Bill_resume_eng.pdf" class="resume-btn">
+              <span class="lang-en">Download Resume</span>
+              <span class="lang-zh">履歷下載</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WHO WE ARE (VIDEO) -->
-    <section id="who-we-are" class="video-section">
-      <div class="video-bg">
-        <video
-          src="./assets/videos/sora.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
-        <div class="video-overlay"></div>
-      </div>
-      <div class="video-content">
-        <h2 class="heading-2">
-          <span class="lang-en">One day, or day one</span>
-          <span class="lang-zh">One day, or day one</span>
-        </h2>
-        <p>
-          <span class="lang-en">
-            This is my guiding philosophy: instead of imagining about the future, I start the change today.
-          </span>
-          <span class="lang-zh">
-            這是我一直抱持的理念，與其每天抱怨自己不足，不如從今天開始改變。
-          </span>
-        </p>
-      </div>
-    </section>
 
-    <!-- STRENGTH SECTION (PINNED, HORIZONTAL SCROLL) -->
-    <section id="strength" class="strength-section">
-      <div class="strength-sticky">
-        <div class="strength-heading">
-          <h2 class="heading-2">
-            <span class="lang-en">My Strengths</span>
-            <span class="lang-zh">特點</span>
-          </h2>
-        </div>
-        <div class="strength-scroller">
-          <div class="strength-card">
-            <h3>
-              <span class="lang-en">Independent Thinking</span>
-              <span class="lang-zh">善於獨立思考</span>
-            </h3>
-            <p>
-              <span class="lang-en">
-                I regularly read and study, internalizing new ideas. This habit helped me develop my own indipendent thinking, benefiting me throught my life by having my own opinion.
-              </span>
-              <span class="lang-zh">
-                我時常閱讀和學習，內化新點子。這項習慣刺激了我的獨立思考，使我能夠產生更多自己的意見和想法，幫助很大。
-              </span>
-            </p>
+    <!-- MEGA-SCROLL SECTION -->
+    <section id="mega-scroll" class="mega-scroll-section">
+      <div class="mega-sticky">
+        <!-- PORTFOLIO PART -->
+        <div class="portfolio-wrapper">
+          <div class="portfolio-heading">
+            <h2 class="heading-2">
+              <span class="lang-en">My<br>Portfolio</span>
+              <span class="lang-zh">作品集</span>
+            </h2>
           </div>
-          <div class="strength-card">
-            <h3>
-              <span class="lang-en">Embracing Novelty</span>
-              <span class="lang-zh">善用新事物</span>
-            </h3>
-            <p>
-              <span class="lang-en">
-                Many fear new things due to uncertainty, rejecting to change because of the fear. I adopt to new things and learn them early, gaining a head start before most people and use the head start as my edge.
-              </span>
-              <span class="lang-zh">
-                許多人因為不確定性而害怕新事物，這份害怕導致他們拒絕改變。我會去迎合改變，在他人還沒起跑時拔得頭籌，將這份能力轉化為自己的優勢。
-              </span>
-            </p>
-          </div>
-          <div class="strength-card">
-            <h3>
-              <span class="lang-en">Self-Discipline</span>
-              <span class="lang-zh">自律</span>
-            </h3>
-            <p>
-              <span class="lang-en">
-                As a high school basketball captain, I learned how consistent effort leads to big improvements. I carried this learning ever since, and stride to better my self everyday.
-              </span>
-              <span class="lang-zh">
-                我在高中擔任籃球隊長時，體悟到長時間的努力能帶來極大的成果。高中畢業後，我將這個經驗銘記在心，並每天想辦法多進步一點。
-              </span>
-            </p>
-          </div>
-          <div class="strength-card">
-            <h3>
-              <span class="lang-en">Willingness to Admit Mistakes</span>
-              <span class="lang-zh">願意認錯</span>
-            </h3>
-            <p>
-              <span class="lang-en">
-                My father taught me not to fear being different or admitting mistakes. If I don’t know something, I say so openly.
-              </span>
-              <span class="lang-zh">
-                我的父親教導我永遠不要害怕承認錯誤。當我不知道答案時，我會盡可能地坦承並和你說我不知道，或是我犯錯了。
-              </span>
-            </p>
-          </div>
-          <div class="strength-card">
-            <h3>
-              <span class="lang-en">Rational</span>
-              <span class="lang-zh">理性</span>
-            </h3>
-            <p>
-              <span class="lang-en">
-                I keep calm when solving problems, focusing on resources at hand & best solutions without letting my emotions rule me. This has benifitted me greatly on my investments and problem solving.
-              </span>
-              <span class="lang-zh">
-                在解決問題時，我會冷靜考慮手邊的資源以及最佳的解法，不讓我的情緒去左右我的決策。這對於我在問題解決以及投資上助益極大。
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
+          <div class="portfolio-scroller">
+            <!-- Portfolio Card 1: Video Card -->
+            <div class="portfolio-card video-card" style="--card-text-color: #ffffff;">
+              <video class="card-video" src="./assets/videos/sora.mp4" autoplay loop muted playsinline></video>
+              <div class="card-overlay"></div>
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <h3>
+                  <span class="lang-en">AI model training</span>
+                  <span class="lang-zh">深度學習模型訓練</span>
+                </h3>
+                <p>
+                  <span class="lang-en">
+                    For the finals of a graduate level class, I trained a deep learning model on the past 10 years of S&P 500 related information to predict the price.<br><br>It was quite an experience. I really learned a lot of machine/deep learning principles and data curation from it.
+                  </span>
+                  <span class="lang-zh">
+                    在一堂碩士課程的期末專案中，我使用S&P500過去十年的資料訓練了一個股價預測的深度學習模型。<br><br>我在這個過程中學到很多機械/深度學習的知識，也獲得了更多爬蟲、API使用和整理資料的經驗.
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/Cheat_dl.png</div>
+                  <div class="desc-en">
+                    This is the first test result of our model, using a more unrealistic approach to testing. The results showed good trend prediction, the actual value of predictions aren't far off from the actual values.
+                  </div>
+                  <div class="desc-zh">
+                    這是我們模型的第一個測試結果，使用了較不實際的測試方法。測試結果顯示了非常好的趨勢預測，每一個測試點和實際值均相差不遠.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/No_cheat_dl.png</div>
+                  <div class="desc-en">
+                    This is the second test result of our model, using a more realistic approach to testing. The results showed bad prediction, the predicted trend are off compared to the actual value.
+                  </div>
+                  <div class="desc-zh">
+                    這是我們模型的第二個測試結果，使用了較實際的測試方法。測試結果顯示模型預測效果極差，預測走勢和實際值相差甚遠.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/meme.png</div>
+                  <div class="desc-en">
+                    Our conclusion is that deep learning is not a good fit for long term stock price prediction. The event-driven and macro-sensitive features of stock price makes it hard for neural networks to map out the future based on patterns in the past.
+                  </div>
+                  <div class="desc-zh">
+                    我們的結論是深度學習不適合長期股價預測. 股價事件導向和總經敏感的特性使神經網絡很難根據過去資料的模式來準確預測未來.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Card 2: Color Card -->
+            <div class="portfolio-card color-bg" style="--card-bg-color: #26547c; --card-text-color: #ffffff;">
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <h3>
+                  <span class="lang-en">Tableau dashboards</span>
+                  <span class="lang-zh">Tableau 儀錶板</span>
+                </h3>
+                <p>
+                  <span class="lang-en">
+                    After learning about Python, SQL, and other data related skills, I started learning about how to visualize large sets of data with Tableau, a data visualization tool.<br><br>Though the data that I visualized aren't huge, the visualization technique is still the same, so I used quartely financail results of America tech companies to practice Tableau dashboards crafting.
+                  </span>
+                  <span class="lang-zh">
+                    在學習了 Python、SQL 與其他與資料相關的技能後，我開始學習如何使用 Tableau 這個資料視覺化工具，來視覺化大型資料集。<br><br>雖然我使用的資料集並不算龐大，但視覺化的技術依然相同，因此我使用美國科技公司季度財務結果來練習 Tableau 儀表板製作.
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/TSLA.png</div>
+                  <div class="desc-en">
+                    This is the TESLA dashboard I created for it's second quarter financials, containing important and fitting metrics of the company. Fun fact, I operate with more than 1 million NT$, TESLA is my largest holding and the reason I have a million in the first place.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 TESLA 第二季度財務數據建立的儀表板，包含了各種適合特斯拉的指標. 有趣的事實是, 我的操作資金超過一百萬新台幣, TESLA 是我持有最多的股票, 也是我能賺到這筆資金的主要原因.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/META.png</div>
+                  <div class="desc-en">
+                    This is the META dashboard I created for it's second quarter financials, also with metrics fitting of the company. META also happens to be my second largest holdings, so I'm basically practicing Tableau while learning more about my stocks.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 META 第二季度財務數據所建立的儀表板, 同樣包含了適合該公司的指標. META 是我持有的第二大股票, 所以我基本上是同時在練習 Tableau 和更深入地瞭解了自己的投資.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Card 3: Color Card -->
+            <div class="portfolio-card color-bg" style="--card-bg-color: #ffd166; --card-text-color: #333333;">
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <h3>
+                  <span class="lang-en">This website</span>
+                  <span class="lang-zh">這個網站</span>
+                </h3>
+                <p>
+                  <span class="lang-en">
+                    When I'm learning Python, I learned the basics of almost every aspect of it and advanced in what I like. Data anaysis, Web scraping, also, Web design. I have enumerated over several different websites, and this one is the best of all.<br><br>Though only a side project, this demonstrates my learning skills and ability to adapt. In the future, I wish to apply the same mentality to the challenges that I will be facing.
+                  </span>
+                  <span class="lang-zh">
+                    在學習 Python 的過程中, 我學習了各個面向的基礎並強化了我喜歡的技能. 這包括資料分析, 網頁爬蟲以及 - 網頁設計. 我設計過好幾個不同的網站, 而這個網站是其中最出色的.<br><br>雖然這只是一個小專案, 但它展現了我的學習與適應能力. 在未來的日子裡, 我希望能以同樣的心態來面對更多的挑戰.
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/TSLA.png</div>
+                  <div class="desc-en">
+                    This is the TESLA dashboard I created for it's second quarter financials, containing important and fitting metrics of the company. Fun fact, I operate with more than 1 million NT$, TESLA is my largest holding and the reason I have a million in the first place.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 TESLA 第二季度財務數據建立的儀表板, 包含了各種適合特斯拉的指標. 有趣的事實是, 我的操作資金超過一百萬新台幣, TESLA 是我持有最多的股票, 也是我能賺到這筆資金的主要原因.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/META.png</div>
+                  <div class="desc-en">
+                    This is the META dashboard I created for it's second quarter financials, also with metrics fitting of the company. META also happens to be my second largest holdings, so I'm basically practicing Tableau while learning more about my stocks.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 META 第二季度財務數據所建立的儀表板, 同樣包含了適合該公司的指標. META 是我持有的第二大股票, 所以我基本上是同時在練習 Tableau 和更深入地瞭解了自己的投資.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Card 4: Video Card -->
+            <div class="portfolio-card video-card" style="--card-text-color: #ffffff;">
+              <video class="card-video" src="./assets/videos/Biz.mp4" autoplay loop muted playsinline></video>
+              <div class="card-overlay"></div>
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <h3>
+                  <span class="lang-en">Taipei exchange compitition's finalist</span>
+                  <span class="lang-zh">櫃買中心競賽進入最終名單</span>
+                </h3>
+                <p>
+                  <span class="lang-en">
+                    This competition requires the attendees to choose financial products, analyze them, and compile a portfolio to compete. Not only did I utilized my financail knowledge for the products in the portfolio, for the allocation of it, I used Python to conduct a Monte Carlo analysis, which calculates the optimal allocation based on past price information. I learned about how to incorporate quatitative approach into finance and was able to utilize it in practice.
+                  </span>
+                  <span class="lang-zh">
+                    這場比賽要求參賽者挑選金融產品、進行分析並組合成投資組合來和彼此競爭。除了在投資組合中運用金融知識外，我還使用了量化分析，根據商品過去的價格資訊來計算投資組合的最適配置。透過這次的比賽經驗我學到如何將量化方法融入金融，並能實際加以應用.
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/Gua_2024.png</div>
+                  <div class="desc-en">
+                    This is the certification of the competition. It's a overall fun experience. It gave me the chance to think about how data based decision making can be incorporated into actual investment, and I benifitted tramendously from the experience.
+                  </div>
+                  <div class="desc-zh">
+                    這是我在這場比賽中獲得的證書。整體來說，這是一個很有趣的體驗。它給了我一個去思考如何將以資料為基礎的決策融入實際投資的機會，我也在這次經驗中獲益匪淺.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/Monte.png</div>
+                  <div class="desc-en">
+                    This is the Monte Carlo simulation results. We ran 1 million random allocations with the given stocks that we've picked previously, and compute the Sharpe ratio ( Payoff/Unit risk ) and see out of the million allocations, which yields the highest sharp ratio.
+                  </div>
+                  <div class="desc-zh">
+                    這是蒙地卡羅模擬的結果。我們針對先前選定的股票進行了一百萬種隨機配置，並計算了夏普比率（報酬／風險），找出在這一百萬種配置中能產生最高夏普比率的配置.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio Card 5: Color Card -->
+            <div class="portfolio-card color-bg" style="--card-bg-color: #1b998b; --card-text-color: #ffffff;">
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <h3>
+                  <span class="lang-en">This website</span>
+                  <span class="lang-zh">這個網站</span>
+                </h3>
+                <p>
+                  <span class="lang-en">
+                    When I'm learning Python, I learned the basics of almost every aspect of it and advanced in what I like. Data anaysis, Web scraping, also, Web design. I have enumerated over several different websites, and this one is the best of all.<br><br>Though only a side project, this demonstrates my learning skills and ability to adapt. In the future, I wish to apply the same mentality to the challenges that I will be facing.
+                  </span>
+                  <span class="lang-zh">
+                    在學習 Python 的過程中，我學習了各個面向的基礎並強化了我喜歡的技能。這包括資料分析、網頁爬蟲以及 - 網頁設計。我設計過好幾個不同的網站，而這個網站是其中最出色的。<br><br>雖然這只是一個小專案，但它展現了我的學習與適應能力。在未來的日子裡，我希望能以同樣的心態來面對更多的挑戰.
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/TSLA.png</div>
+                  <div class="desc-en">
+                    This is the TESLA dashboard I created for it's second quarter financials, containing important and fitting metrics of the company. Fun fact, I operate with more than 1 million NT$, TESLA is my largest holding and the reason I have a million in the first place.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 TESLA 第二季度財務數據建立的儀表板，包含了各種適合特斯拉的指標。有趣的事實是，我的操作資金超過一百萬新台幣，TESLA 是我持有最多的股票，也是我能賺到這筆資金的主要原因.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/META.png</div>
+                  <div class="desc-en">
+                    This is the META dashboard I created for it's second quarter financials, also with metrics fitting of the company. META also happens to be my second largest holdings, so I'm basically practicing Tableau while learning more about my stocks.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 META 第二季度財務數據所建立的儀表板，同樣包含了適合該公司的指標。META 是我持有的第二大股票，所以我基本上是同時在練習 Tableau 和更深入地瞭解了自己的投資.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end .portfolio-scroller -->
+          <!-- STRENGTH PART (within mega-scroll) -->
+          <section id="strength-section" class="strength-section">
+            <div class="strength-wrapper">
+              <div class="strength-heading">
+                <h2 class="heading-2">
+                  <span class="lang-en">My<br>Strengths</span>
+                  <span class="lang-zh">特點</span>
+                </h2>
+              </div>
+              <div class="strength-scroller">
+                <!-- #5 Color Card -->
+                <div class="strength-card color-bg" style="--card-bg-color: #F5F5F7; --card-text-color: #1D1D1F;">
+                  <div class="card-content">
+                    <h3>
+                      <span class="lang-en">Rational</span>
+                      <span class="lang-zh">理性</span>
+                    </h3>
+                    <p>
+                      <span class="lang-en">
+                        I keep calm when solving problems, focusing on resources at hand & best solutions without letting my emotions rule me. This has benifited me greatly on my investments and problem solving.
+                      </span>
+                      <span class="lang-zh">
+                        在解決問題時，我會冷靜考慮手邊的資源以及最佳的解法，不讓我的情緒去左右我的決策。這對於我在問題解決以及投資上助益極大.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- #4 Color Card -->
+                <div class="strength-card color-bg" style="--card-bg-color: #DADAE3; --card-text-color: #1F1F22;">
+                  <div class="card-content">
+                    <h3>
+                      <span class="lang-en">Willingness to Admit Mistakes</span>
+                      <span class="lang-zh">願意認錯</span>
+                    </h3>
+                    <p>
+                      <span class="lang-en">
+                        My father taught me not to fear being different or admitting mistakes. If I don’t know something, I say so openly.
+                      </span>
+                      <span class="lang-zh">
+                        我的父親教導我永遠不要害怕承認錯誤。當我不知道答案時，我會盡可能地坦承並和你說我不知道，或是我犯錯了.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- #3 Video Card -->
+                <div class="strength-card video-card" style="--card-text-color: #ffffff;">
+                  <video class="card-video" src="./assets/videos/Discipline.mp4" autoplay loop muted playsinline></video>
+                  <div class="card-overlay"></div>
+                  <div class="card-content">
+                    <h3>
+                      <span class="lang-en">Self-Discipline</span>
+                      <span class="lang-zh">自律</span>
+                    </h3>
+                    <p>
+                      <span class="lang-en">
+                        As a high school basketball captain, I learned how consistent effort leads to big improvements. I carried this learning ever since, and stride to better my self everyday.
+                      </span>
+                      <span class="lang-zh">
+                        我在高中擔任籃球隊長時，體悟到長時間的努力能帶來極大的成果。高中畢業後，我將這個經驗銘記在心，並每天想辦法多進步一點.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- #2 Color Card -->
+                <div class="strength-card color-bg" style="--card-bg-color: #D1D1D6; --card-text-color: #1C1C1E;">
+                  <div class="card-content">
+                    <h3>
+                      <span class="lang-en">Embracing Novelty</span>
+                      <span class="lang-zh">善用新事物</span>
+                    </h3>
+                    <p>
+                      <span class="lang-en">
+                        Many fear new things due to uncertainty, rejecting to change because of the fear. I adopt to new things and learn them early, gaining a head start before most people and use the head start as my edge.
+                      </span>
+                      <span class="lang-zh">
+                        許多人因為不確定性而害怕新事物，這份害怕導致他們拒絕改變。我會去迎合改變，在他人還沒起跑時拔得頭籌，將這份能力轉化為自己的優勢.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+
+                <!-- #1 Color Card -->
+                <div class="strength-card color-bg" style="--card-bg-color: #E5E5EA; --card-text-color: #3A3A3C;">
+                  <div class="card-content">
+                    <h3>
+                      <span class="lang-en">Independent Thinking</span>
+                      <span class="lang-zh">善於獨立思考</span>
+                    </h3>
+                    <p>
+                      <span class="lang-en">
+                        I regularly read and study, internalizing new ideas. This habit helped me develop my own independent thinking, benefiting me throughout my life by having my own opinion.
+                      </span>
+                      <span class="lang-zh">
+                        我時常閱讀和學習，內化新點子。這項習慣刺激了我的獨立思考，使我能夠產生更多自己的意見和想法，幫助很大.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                </div>
+              </div> <!-- end strength-scroller -->
+            </div> <!-- end strength-wrapper -->
+          </section>
+        </div> <!-- end mega-sticky -->
+      </div> <!-- end mega-scroll-section -->
     </section>
 
     <!-- CONTACT + FOOTER -->
@@ -284,28 +528,16 @@ git push -->
             <span class="lang-en">Questions or collaboration? Reach me below:</span>
             <span class="lang-zh">有任何問題或合作機會？歡迎與我聯繫：</span>
           </p>
-
           <div class="social-contact-links">
-            <a
-              href="https://twitter.com/CashPrinter3000"
-              target="_blank"
-              class="icon-btn"
-            >
+            <a href="https://twitter.com/CashPrinter3000" target="_blank" class="icon-btn">
               <i class="fa-brands fa-x-twitter"></i>
               <span>X (Twitter)</span>
             </a>
-            <a
-              href="https://instagram.com/bill.edwards_42"
-              target="_blank"
-              class="icon-btn"
-            >
+            <a href="https://instagram.com/bill.edwards_42" target="_blank" class="icon-btn">
               <i class="fa-brands fa-instagram"></i>
               <span>Instagram</span>
             </a>
-            <a
-              href="mailto:bill.edwards.workmail@gmail.com?subject=Hello"
-              class="icon-btn"
-            >
+            <a href="mailto:bill.edwards.workmail@gmail.com?subject=Hello" class="icon-btn">
               <i class="fa-solid fa-envelope"></i>
               <span>Email</span>
             </a>
@@ -315,7 +547,6 @@ git push -->
             </a>
           </div>
         </div>
-
         <footer class="footer-dark">
           <div class="footer-container">
             <div class="footer-details">
@@ -331,22 +562,16 @@ git push -->
     <!-- LENS CURSOR -->
     <div class="lens-cursor"></div>
 
-    <!-- SCRIPTS WITH EXTRA DEBUG LOGS -->
+    <!-- SCRIPTS -->
     <script>
       console.log("[DEBUG] Attempting to load jQuery from unpkg + the older Lenis snippet...");
     </script>
-
-    <!-- jQuery from unpkg -->
     <script
       src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-
-    <!-- Lenis v0.2.28 -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-
-    <!-- Initialize Lenis snippet -->
     <script>
       console.log("[DEBUG] Setting up the older Lenis snippet (0.2.28)...");
       const lenis = new Lenis({
@@ -355,27 +580,37 @@ git push -->
         direction: "vertical",
         gestureDirection: "vertical",
         smooth: true,
-        mouseMultiplier: 0.85,
+        mouseMultiplier: 0.5,
         smoothTouch: false,
         touchMultiplier: 2,
         infinite: false,
       });
-
-      // We'll tie the pinned logic to 'scroll' event
-      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-        console.log("[Lenis 0.2.28] scroll:", scroll);
-        handleStrengthScroll(scroll);
+      lenis.on("scroll", ({ scroll }) => {
+        handleMegaScroll(scroll);
       });
-
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
-
       requestAnimationFrame(raf);
     </script>
-
-    <!-- main.js -->
+    <div class="portfolio-modal" id="portfolio-modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-container">
+        <div class="modal-image-wrapper">
+          <img class="modal-image" src="" alt="Project Image" />
+        </div>
+      </div>
+      <button class="modal-arrow modal-arrow-left" aria-label="Previous Image">‹</button>
+      <button class="modal-arrow modal-arrow-right" aria-label="Next Image">›</button>
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-description">
+        <p class="modal-desc-text">
+          <span class="lang-en">Project details (English)</span>
+          <span class="lang-zh">項目詳細資訊（中文）</span>
+        </p>
+      </div>
+    </div>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

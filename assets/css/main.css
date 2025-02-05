@@ -1,33 +1,47 @@
-/* --- GLOBAL RESETS --- */
+/* ===================================================
+   GLOBAL RESETS & BASE STYLES
+   =================================================== */
+/* Reset box-sizing for all elements */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/* Remove the default cursor so our custom lens cursor can be used */
 html, body, * {
-  cursor: none !important; /* lens cursor usage */
+  cursor: none !important;
 }
-html,
-body {
+
+html, body {
   margin: 0;
   padding: 0;
   font-family: "El Messiri", "Noto Sans TC", sans-serif;
   overflow: visible;
 }
 
-/* BILINGUAL TOGGLE */
+/* ===================================================
+   BILINGUAL TOGGLE
+   ---------------------------------------------------
+   Default: show English (.lang-en) and hide Chinese (.lang-zh).
+   Toggling the body class "chinese-mode" reverses that.
+   =================================================== */
 .lang-en { display: inline; }
 .lang-zh { display: none; }
 body.chinese-mode .lang-en { display: none; }
 body.chinese-mode .lang-zh { display: inline; }
 
-/* NAVBAR (69px tall) */
+/* ===================================================
+   NAVBAR
+   ---------------------------------------------------
+   Fixed at top with a custom height (69px). It hides on scroll
+   (via the .nav-hidden class) and contains responsive menu styling.
+   =================================================== */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  /* Here is your custom height */
   height: 69px;
   z-index: 999;
   background-color: #fdf9f5; 
@@ -42,11 +56,10 @@ body.chinese-mode .lang-zh { display: inline; }
   position: relative;
   width: 90%;
   max-width: 1200px;
-  /* Also 69px to match the navbar container height */
   height: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: center; /* vertical center in 69px */
+  align-items: center;
   justify-content: space-between;
 }
 .brand {
@@ -55,7 +68,6 @@ body.chinese-mode .lang-zh { display: inline; }
   height: 100%;
 }
 .logo {
-  /* So the logo fits in 69px height */
   max-height: 69px;
 }
 .menu-button {
@@ -94,17 +106,25 @@ body.chinese-mode .lang-zh { display: inline; }
   opacity: 0.7;
 }
 
-/* FULL-SCREEN SECTIONS: offset 69px for the navbar */
+/* ===================================================
+   FULL-SCREEN SECTIONS
+   ---------------------------------------------------
+   Each section takes the full viewport height (100vh) with a 
+   top padding to offset the fixed navbar.
+   =================================================== */
 section {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* use 69px as offset instead of 50px */
   padding-top: 69px;
   box-sizing: border-box;
 }
 
-/* HERO SECTION */
+/* ===================================================
+   HERO SECTION
+   ---------------------------------------------------
+   Main introductory section with content and a background image.
+   =================================================== */
 .hero-section {
   background-color: #fdf9f5;
   display: flex;
@@ -133,7 +153,7 @@ section {
 }
 .hero-image-container {
   position: absolute;
-  bottom: -60px;
+  bottom: -15px;
   right: 0;
   width: 50vw;
   height: 50vw;
@@ -148,135 +168,217 @@ section {
   object-fit: cover;
 }
 
-/* DESCRIPTION SECTION (was services) */
-.description-section {
-  background-color: #11224d;
-  padding: 4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.description-inner {
-  width: 90%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
-.description-image-wrapper {
-  width: 300px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-.description-image-wrapper img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-.description-text {
-  flex: 1;
-  color: #c5d8ff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.description-big-title {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  color: #7bb2f9;
-}
-.description-title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #c5d8ff;
-}
-.description-text-container {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-.description-text .btn {
-  display: inline-block;
-  text-align: center;
-  padding: 0.6rem 1.2rem;
-  background-color: #7bb2f9;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-.description-text .btn:hover {
-  background-color: #96c3fa;
-}
 
-/* WHO WE ARE (VIDEO SECTION) */
-.video-section {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+
+/* ===============================
+   Stats / Dashboard Section
+   =============================== */
+   .stats-section {
+    display: flex;
+    align-items: center;          /* Vertical centering */
+    justify-content: center;      /* Horizontal centering */
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1A2533; /* Use your chosen background color */
+    color: #c5d8ff; /* Default text color for left column */
+  }
+  
+  .stats-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  /* Left Column: Personal Info and Title */
+  .stats-left {
+    flex: 0 0 30%;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .personal-info {
+    text-align: center;
+  }
+  
+  .stats-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .personal-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #c5d8ff;
+    text-align: left;
+  }
+  
+  .personal-details li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Right Column: Dashboard */
+  .stats-right {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Horizontal Rows */
+  .stats-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .row-title {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  
+  /* Dashboard Cards */
+  .stats-card {
+    flex: 1 1 calc(25% - 1rem);
+    max-width: 230px; 
+    aspect-ratio: 1 / 1;  /* Ensure square cards */
+    border-radius: 10px;
+    background-color: var(--card-bg-color, #333);
+    color: var(--card-text-color, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stats-card .card-content {
+    text-align: center;
+    padding: 1rem;         /* Optional: add some padding if needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    align-items: flex-start;     /* Align text to the left */
+  }
+  
+  .card-large {
+    display: block;
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .card-small {
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    /* The text here will inherit the card text color */
+  }
+  
+  /* Resume Button */
+  .stats-resume {
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  .stats-resume .resume-btn {
+    display: flex;
+    align-items: center;      /* Centers the text vertically */
+    justify-content: center;  /* Centers the text horizontally */
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+    background-color: #7bb2f9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .stats-resume .resume-btn:hover {
+    background-color: #96c3fa;
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+    }
+    .stats-left,
+    .stats-right {
+      width: 100%;
+    }
+    .stats-row {
+      flex-direction: column;
+    }
+    .stats-card {
+      flex: 1 1 100%;
+      aspect-ratio: auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+/* ===================================================
+   PORTFOLIO SECTION (PINNED HORIZONTAL SCROLL)
+   ---------------------------------------------------
+   The mega-scroll section that creates a long scroll space (1000vh)
+   and contains two horizontal scrollers: one for portfolio and one
+   for strength. Gradients are used to fade the top and bottom.
+   =================================================== */
+.mega-scroll-section { 
+  height: 680vh; 
 }
-.video-bg {
-  position: absolute;
+.mega-sticky {
+  position: sticky;
   top: 0;
-  left: 0;
+  height: 100vh;
   width: 100%;
-  height: 100%;
   overflow: hidden;
+  background-color: #11224d;
+  transition: background-color 0.4s linear;
+  z-index: 1;
 }
-.video-bg video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#mega-scroll.mega-scroll-section {
+  background-color: #11224d !important;
+  margin: 0;
+  padding: 0;
 }
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 48, 128, 0.4);
+section#mega-scroll.mega-scroll-section {
+  background: none;
 }
-.video-content {
+/* Portfolio wrapper to provide extra vertical scroll space */
+#portfolio.portfolio-section {
+  height: 310vh;
   position: relative;
-  z-index: 10;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 2rem;
-  color: #fff;
+  padding-top: 0;
+  overflow: visible;
+  background-color: #192332;
 }
-.video-content .heading-2 {
-  color: #fff;
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-.video-content p {
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.video-section::before {
+/* Fading gradients at top and bottom */
+#portfolio.portfolio-section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 120px;
-  background: linear-gradient(to bottom, #11224d 0%, rgba(17,34,77,0) 100%);
-  z-index: 5;
+  background: linear-gradient(to bottom, #11224d 0%, rgba(17, 34, 77, 0) 100%);
+  z-index: 1;
   pointer-events: none;
 }
-.video-section::after {
+#portfolio.portfolio-section::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -284,39 +386,35 @@ section {
   right: 0;
   height: 170px;
   background: linear-gradient(to bottom, rgba(253,249,245,0) 0%, #fdf9f5 100%);
-  z-index: 5;
+  z-index: 1;
   pointer-events: none;
 }
-
-/* STRENGTH SECTION (PINNED, HORIZONTAL SCROLL) */
-#strength.strength-section {
-  height: 310vh;
-  padding-top: 0;
-  background-color: #fdf9f5;
-  overflow: visible;
-}
-.strength-sticky {
+/* Sticky container for portfolio horizontal scrolling */
+.portfolio-sticky {
   position: sticky;
-  /* top: 69px so it accounts for the navbar's new height */
   top: 69px;
   height: calc(100vh - 69px);
   width: 100%;
   overflow: hidden;
+  z-index: 2;
 }
-.strength-heading {
+/* Portfolio heading (left side) */
+.portfolio-heading {
   position: absolute;
-  top: 20px;
+  top: 80px;
   left: 2rem;
   pointer-events: none;
   transition: opacity 0.2s linear;
+  z-index: 1;
 }
-.strength-heading .heading-2 {
+.portfolio-heading .heading-2 {
   text-align: left;
-  font-size: 8rem;
+  font-size: 4rem;
   margin: 0;
-  color: #c68e46;
+  color: #fff;
 }
-.strength-scroller {
+/* Portfolio scroller container */
+.portfolio-scroller {
   position: absolute;
   top: 0;
   left: 0;
@@ -327,44 +425,335 @@ section {
   transform: translateX(0);
   padding-left: 320px;
   min-width: 2950px;
+  z-index: 3;
 }
-.strength-scroller::-webkit-scrollbar {
+.portfolio-scroller::-webkit-scrollbar {
   display: none;
 }
-.strength-card {
+/* Portfolio card styling */
+.portfolio-card {
   display: inline-block;
+  position: relative;
   vertical-align: top;
   width: 400px;
-  min-height: 452px;
+  min-height: 525px;
   margin: 80px 1rem 0 1rem;
-  background-color: #fff;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: transparent;
+  padding: 0;
   box-sizing: border-box;
   white-space: normal;
   word-wrap: break-word;
+  z-index: 2;
+  color: var(--card-text-color, #fff);
 }
-.strength-card h3 {
-  font-size: 3rem;
+/* Video background inside portfolio card */
+.portfolio-card .card-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: blur(4px) brightness(0.5);
+}
+/* Optional overlay for video */
+.portfolio-card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 2;
+}
+/* Card content above the video and overlay */
+.portfolio-card .card-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem 1.5rem;
+}
+.portfolio-card .card-content h3 {
   margin: 0 0 1rem 0;
-  color: #c68e46;
+  font-size: 2.4rem;
 }
-.strength-card p {
+.portfolio-card .card-content p {
   margin: 0;
   line-height: 1.5;
-  color: #444;
+}
+/* Info icon on portfolio card */
+.info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 4;
+  transition: transform 0.2s;
+}
+.portfolio-card .info-icon {
+  color: inherit;
+}
+.info-icon:hover {
+  transform: scale(1.1);
 }
 
-/* CONTACT + FOOTER */
+/* ===================================================
+   MODAL STYLES (FOR PORTFOLIO IMAGES)
+   ---------------------------------------------------
+   The modal covers the screen, disables background scrolling,
+   and displays a modal container with image, navigation arrows,
+   close button, and a bilingual description.
+   =================================================== */
+body.modal-open {
+  overflow: hidden;
+}
+body.modal-open .navbar {
+  display: none !important;
+}
+.portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+.modal-container {
+  position: fixed;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 900px;
+  bottom: 150px;
+  margin: 0 auto;
+  background: none;
+  overflow: hidden;
+  z-index: 2;
+}
+.modal-image-wrapper {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+/* Arrow buttons */
+.modal-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 99999;
+}
+.modal-arrow-left {
+  left: 30px;
+}
+.modal-arrow-right {
+  right: 30px;
+}
+.modal-close {
+  position: fixed;
+  top: 10px;
+  right: 16px;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  z-index: 99999;
+}
+.modal-description {
+  position: fixed;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+  font-size: 1rem;
+  z-index: 100001;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+.portfolio-modal.active {
+  display: flex;
+}
+/* When using a color background instead of video */
+.portfolio-card.color-bg {
+  background-color: var(--card-bg-color, #333);
+}
+.portfolio-card.color-bg .card-video,
+.portfolio-card.color-bg .card-overlay {
+  display: none !important;
+}
+
+/* ===================================================
+   STRENGTH SECTION (PINNED HORIZONTAL SCROLL)
+   ---------------------------------------------------
+   Updated to use the reverted color scheme for the wrapper
+   and heading, but with strength cards that support video
+   or color backgrounds (like portfolio cards).
+   =================================================== */
+   .strength-wrapper {
+    background-color: #f5f5f5;
+  }
+  
+  .strength-sticky {
+    position: sticky;
+    top: 69px;
+    height: calc(100vh - 69px);
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .strength-heading {
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    text-align: right;
+    pointer-events: none;
+    transition: opacity 0.2s linear;
+  }
+  
+  .strength-heading .heading-2 {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+    color: #2C3E50;
+  }
+  
+  .strength-scroller {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    white-space: nowrap;
+    text-align: right;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    transform: translateX(0);
+    padding-right: 320px;
+    min-width: 2950px;
+  }
+  
+  .strength-scroller::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* === NEW STRENGTH CARD STYLING (Mimicking Portfolio Cards) === */
+  .strength-card {
+    display: inline-block;
+    position: relative;             /* Creates a local stacking context */
+    vertical-align: top;
+    width: 400px;
+    min-height: 525px;
+    margin: 80px 1rem 0 1rem;
+    overflow: hidden;               /* Prevents inner elements from spilling out */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 0;                     /* Remove any extra padding – content is inside .card-content */
+    box-sizing: border-box;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 2;
+    background-color: var(--card-bg-color, #333);
+    color: var(--card-text-color, #fff);
+  }
+  
+  /* Optional: Support for a video background */
+  .strength-card .card-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(4px) brightness(0.5);
+  }
+  
+  /* Optional overlay (if using video background) */
+  .strength-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  /* Container for textual content inside each card */
+  .strength-card .card-content {
+    position: relative;
+    z-index: 3;
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Card title */
+  .strength-card .card-content h3 {
+    margin: 0 0 1rem 0;
+    font-size: 2.4rem;
+    color: var(--card-text-color, #fff);
+    text-align: left;
+  }
+  
+  /* Card description */
+  .strength-card .card-content p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    color: inherit;
+  }
+  
+  /* Remove any info icon (not needed in strength cards) */
+  .strength-card .info-icon {
+    display: none;
+  }
+
+/* ===================================================
+   CONTACT & FOOTER
+   ---------------------------------------------------
+   Styles for the contact section and dark footer.
+   =================================================== */
 .contact-footer-section {
-  background-color: #f5f5f5;
+  background-color: #D9E2EC;
 }
 .social-contact-links {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 0rem;
+  margin-top: 0;
 }
 .icon-btn {
   display: flex;
@@ -418,17 +807,25 @@ section {
   margin: 1rem 0;
 }
 
-/* HEADINGS */
+/* ===================================================
+   HEADINGS
+   ---------------------------------------------------
+   Base styling for headings.
+   =================================================== */
 .heading-2 {
   font-size: 1.8rem;
   text-align: center;
 }
 
-/* LENS CURSOR */
+/* ===================================================
+   CUSTOM LENS CURSOR
+   ---------------------------------------------------
+   The custom circular cursor that follows the mouse.
+   =================================================== */
 .lens-cursor {
   pointer-events: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 10000;
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -443,6 +840,107 @@ section {
   transform: translate(-50%, -50%) scale(2);
 }
 
+/* ===================================================
+   HOVER LIFT EFFECT (DESKTOP)
+   ---------------------------------------------------
+   A slight shift and shadow on cards when hovered.
+   =================================================== */
+@media screen and (hover: hover) {
+  .portfolio-card:hover,
+  .strength-card:hover {
+    transform: translate(10px, -12px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* ===================================================
+   MEDIA QUERIES
+   ---------------------------------------------------
+   Adjust typography, layout, and visibility for various
+   screen sizes.
+   =================================================== */
+
+   @media screen and (max-width: 1430px) {
+    .stats-card {
+      flex: 1 1 calc(25% - 1rem);
+      max-width: 200px; 
+    }
+    .stats-row {
+      gap: 3rem; 
+    }
+    .stats-container {
+      max-width: 1100px;
+      gap: 2rem;
+    }
+    .stats-resume .resume-btn {
+      height: 50px;
+      padding: 1rem;
+    }
+    .card-large {
+      font-size: 3.4rem;
+    }
+    
+    .card-small {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1290px) {
+    .stats-card {
+      flex: 1 1 calc(25% - 1rem);
+      max-width: 180px; 
+    }
+    .stats-row {
+      gap: 2rem; 
+    }
+    .stats-container {
+      max-width: 1000px;
+      gap: 2rem;
+    }
+    .stats-resume .resume-btn {
+      height: 45px;
+      padding: 1rem;
+    }
+    .card-large {
+      font-size: 3.1rem;
+    }
+    
+    .card-small {
+      font-size: 0.9rem;
+    }
+    .personal-details {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1220px) {
+    .stats-card {
+      flex: 1 1 calc(25% - 1rem);
+      max-width: 165px; 
+    }
+    .stats-row {
+      gap: 2rem; 
+    }
+    .stats-container {
+      max-width: 900px;
+      gap: 2rem;
+    }
+    .stats-resume .resume-btn {
+      height: 40px;
+      padding: 1rem;
+    }
+    .card-large {
+      font-size: 3.1rem;
+    }
+    
+    .card-small {
+      font-size: 0.9rem;
+    }
+    .personal-details {
+      font-size: 0.9rem;
+    }
+  }
 /* MID-SIZE SCREENS (<=1100px) */
 @media screen and (max-width: 1100px) {
   .hero-content h1 {
@@ -451,13 +949,11 @@ section {
   .hero-content p {
     font-size: 1.4rem;
   }
-  .description-image-wrapper {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto 1.5rem;
+  .stats-card {
+    flex: 1 1 calc(25% - 1rem);
+    max-width: 190px; 
   }
 }
-
 /* EVEN NARROWER (<=900px) */
 @media screen and (max-width: 900px) {
   .hero-content h1 {
@@ -475,8 +971,7 @@ section {
     font-size: 3rem;
   }
 }
-
-/* MOBILE (<= 768px) */
+/* MOBILE (<=768px) */
 @media screen and (max-width: 768px) {
   .menu-button {
     display: block;
@@ -489,7 +984,6 @@ section {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    /* place the menu below the 69px navbar */
     top: 69px;
     left: 0;
     width: 100%;
@@ -506,22 +1000,28 @@ section {
   .nav-links.open a {
     font-size: 1.2rem;
   }
-  .description-text-container {
-    font-size: 0.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
   .hero-image-container {
-    bottom: -10px;
-  }
-  .description-image-wrapper {
     display: none;
+  }
+  .stats-container {
+    flex-direction: column;
+  }
+  .stats-image {
+    max-width: 240px;
+  }
+  .stats-right {
+    display: none;  /* Hide the entire right column on small screens */
+  }
+  .stats-left {
+    width: 100%;
   }
   .video-content .heading-2 {
     font-size: 2.6rem;
   }
+  .portfolio-card .info-icon {
+    display: none;
+  }
 }
-
 /* OVERRIDE FOR TOUCH / COARSE POINTER DEVICES */
 @media (pointer: coarse), (hover: none) {
   html, body, * {
@@ -541,6 +1041,7 @@ section {
   .hero-image-container {
     bottom: -10px;
   }
-
-  
-}
+  .portfolio-card .info-icon {
+    display: none;
+  }
+} 
