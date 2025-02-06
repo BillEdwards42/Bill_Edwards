@@ -141,7 +141,7 @@ section {
   font-size: 4rem;
   margin-bottom: 0.5rem;
   line-height: 1.2em;
-  color: #c68e46;
+  color: #3A3A3A
 }
 .hero-content p {
   font-size: 1.8rem;
@@ -149,7 +149,7 @@ section {
 .quote-author {
   font-weight: 500;
   margin-top: 1rem;
-  color: #777;
+  color: #4A4A4A;
 }
 .hero-image-container {
   position: absolute;
@@ -166,6 +166,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right;
 }
 
 
@@ -179,7 +180,7 @@ section {
     justify-content: center;      /* Horizontal centering */
     width: 100%;
     min-height: 100vh;
-    background-color: #1A2533; /* Use your chosen background color */
+    background-color: #2A2A2A; /* Use your chosen background color */
     color: #c5d8ff; /* Default text color for left column */
   }
   
@@ -215,7 +216,7 @@ section {
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
-    color: #c5d8ff;
+    color: #ECEFFE;
     text-align: left;
   }
   
@@ -298,8 +299,8 @@ section {
     width: 100%;
     height: 50px;
     padding: 1rem;
-    background-color: #7bb2f9;
-    color: #fff;
+    background-color: #5A5A5A;
+    color: #FDF9F5;
     text-decoration: none;
     border-radius: 4px;
     font-size: 1.2rem;
@@ -307,7 +308,8 @@ section {
   }
   
   .stats-resume .resume-btn:hover {
-    background-color: #96c3fa;
+    background-color: #ffffff; /* your chosen hover background color */
+  color: #222222;          /* for example, a warm gold for contrast */
   }
   
   /* Responsive Adjustments */
@@ -346,17 +348,22 @@ section {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: #11224d;
+  background-color: #FFFFFF;
   transition: background-color 0.4s linear;
   z-index: 1;
 }
 #mega-scroll.mega-scroll-section {
-  background-color: #11224d !important;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
 }
 section#mega-scroll.mega-scroll-section {
   background: none;
+}
+
+#portfolio-section {
+  position: relative;
+  /* Set a specific height if needed, or let its content determine the height */
 }
 /* Portfolio wrapper to provide extra vertical scroll space */
 #portfolio.portfolio-section {
@@ -364,8 +371,25 @@ section#mega-scroll.mega-scroll-section {
   position: relative;
   padding-top: 0;
   overflow: visible;
-  background-color: #192332;
+  background-color: #FFFFFF; /* Example from Set 1 */
+  color: #ffffff;
 }
+
+#portfolio-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Set below your portfolio content */
+  pointer-events: none; /* So the particles don’t interfere with user interactions */
+}
+
+.portfolio-content {
+  position: relative;
+  z-index: 2; /* Content appears above the particles */
+}
+
 /* Fading gradients at top and bottom */
 #portfolio.portfolio-section::before {
   content: "";
@@ -747,7 +771,7 @@ body.modal-open .navbar {
    Styles for the contact section and dark footer.
    =================================================== */
 .contact-footer-section {
-  background-color: #D9E2EC;
+  background-color: #E5E5EA;
 }
 .social-contact-links {
   display: flex;

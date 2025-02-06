@@ -86,6 +86,7 @@ function handleMegaScroll(currentScrollY) {
   const strengthHeading = document.querySelector(".strength-heading");
   if (!portfolioScroller || !strengthScroller) return;
 
+
   /********** 1) BACKGROUND COLOR FADE **********/
 // Update the sticky container’s background based on scroll progress.
 // For pinnedProgress below 0.5, we fade from the mega navy to a portfolio dark tone.
@@ -93,14 +94,14 @@ function handleMegaScroll(currentScrollY) {
 if (stickyContainer) {
   if (pinnedProgress < 0.5) {
     // Fade from mega navy (#11224d) to portfolio tone (#192332) as the user scrolls
-    const fromColor = { r: 17, g: 34, b: 77 };   // #11224d
-    const toColor = { r: 25, g: 35, b: 50 };      // example portfolio tone (#192332)
-    const fadeStart = 0.30;
+    const fromColor = { r: 44, g: 62, b: 80 };
+    const toColor = { r: 58, g: 74, b: 96 };
+    const fadeStart = 0.40;
     const fadeEnd = 0.5;
     if (pinnedProgress <= fadeStart) {
-      stickyContainer.style.backgroundColor = "rgb(17,34,77)";
+      stickyContainer.style.backgroundColor = "rgb(13, 15, 20)";
     } else if (pinnedProgress >= fadeEnd) {
-      stickyContainer.style.backgroundColor = "rgb(25,35,50)";
+      stickyContainer.style.backgroundColor = "rgb(44, 44, 46)";
     } else {
       const t = (pinnedProgress - fadeStart) / (fadeEnd - fadeStart);
       const r = Math.round(fromColor.r + (toColor.r - fromColor.r) * t);
@@ -166,6 +167,17 @@ if (stickyContainer) {
     strengthHeading.style.opacity = (1 - sP).toString();
   } else {
     strengthHeading.style.opacity = "0";
+  }
+
+  const particleContainer = document.getElementById('portfolio-particles');
+  if (particleContainer) {
+    if (pinnedProgress < 0.5) {
+      particleContainer.style.opacity = "1";
+      particleContainer.style.pointerEvents = "auto"; // allow interactivity if desired
+    } else {
+      particleContainer.style.opacity = "0";
+      particleContainer.style.pointerEvents = "none"; // disable interactivity when hidden
+    }
   }
 }
 
@@ -302,3 +314,88 @@ if (arrowRight) {
 if (closeBtn) {
   closeBtn.addEventListener("click", closeModal);
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const particleContainer = document.getElementById('portfolio-particles');
+  if (particleContainer) {
+    particlesJS("portfolio-particles", {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        // Change from "canvas" to "window" so that even if the canvas is behind content the mouse is detected.
+        "detect_on": "window",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"   // Changed from "repulse" to "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 200,      // Adjust this distance as needed for a “connection” effect
+            "line_linked": { "opacity": 0.5 }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": { "distance": 200 },
+          "push": { "particles_nb": 4 },
+          "remove": { "particles_nb": 2 }
+        }
+      },
+      "retina_detect": true
+    }, function() {
+      console.log('Particles.js has been loaded for the portfolio section.');
+    });
+  }
+});
+
