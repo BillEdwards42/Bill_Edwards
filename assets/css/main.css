@@ -339,6 +339,15 @@ section {
    and contains two horizontal scrollers: one for portfolio and one
    for strength. Gradients are used to fade the top and bottom.
    =================================================== */
+.custom-link {
+  color: inherit;
+  text-decoration: underline;
+}
+/* Optional: Ensure the hover state maintains the underline */
+.custom-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
 .mega-scroll-section { 
   height: 600vh; 
 }
