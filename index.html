@@ -104,7 +104,7 @@ git push -->
             <ul class="personal-details">
               <li><strong><span class="lang-en">Name: </span><span class="lang-zh">名稱: </span></strong><span class="lang-en">Bill Edwards</span><span class="lang-zh">艾威朋</span></li>
               <li><strong><span class="lang-en">Nationality: </span><span class="lang-zh">國籍: </span></strong><span class="lang-en">USA/R.O.C.</span><span class="lang-zh">美國/臺灣</span></li>
-              <li><strong><span class="lang-en">Age: </span><span class="lang-zh">年齡: </span></strong><span class="lang-en">20</span><span class="lang-zh">20</span></li>
+              <li><strong><span class="lang-en">Age: </span><span class="lang-zh">年齡: </span></strong><span class="lang-en">21</span><span class="lang-zh">20</span></li>
               <li><strong><span class="lang-en">School: </span><span class="lang-zh">學校: </span></strong><span class="lang-en">Cheng Chung University</span><span class="lang-zh">國立中正大學</span></li>
               <!-- Add additional details as desired -->
             </ul>
@@ -179,7 +179,7 @@ git push -->
           </div>
           <!-- Resume Button (Full Width) -->
           <div class="stats-resume">
-            <a href="./assets/docs/Bill_engCV.pdf" download="Bill_engCV.pdf" class="resume-btn">
+            <a href="./assets/docs/Bill履歷.pdf" download="Bill履歷.pdf" class="resume-btn">
               <span class="lang-en">Download Resume</span>
               <span class="lang-zh">履歷下載</span>
             </a>
@@ -205,6 +205,46 @@ git push -->
             </h2>
           </div>
           <div class="portfolio-scroller">
+            <!-- Portfolio Card 3: Color Card -->
+            <div class="portfolio-card color-bg" style="--card-bg-color: #3B4C62; --card-text-color: #ECEFFE;">
+              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
+              <div class="card-content">
+                <a href="https://ccumap.com" class="custom-link">
+                  <h3>
+                    <span class="lang-en">Salary and rent map website for my Uni</span>
+                    <span class="lang-zh">中正大學打工/租屋地圖網站</span>
+                  </h3>
+                </a>
+                <p>
+                  <span class="lang-en">
+                    This website took me quite some time. After lots of git pushes and api calls, it is now ready. You know, what I learned most about writing websites is not the hard coding skills, AI can assist in that, but the intimate understanding of how internet works and the realizations that came with it.
+                  </span>
+                  <span class="lang-zh">
+                    這個網站花了我蠻長的時間。在無數的 git push 後，現在完成了。你知道，我從寫網站中學到的最多東西不是寫程式的硬能力，AI可以大程度的輔助可以大程度的輔助寫碼，而是對網際網路運作的深度了解以及隨之而來的醒悟。
+                  </span>
+                </p>
+              </div>
+              <div class="hidden-images" style="display: none;">
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/ccumap.png</div>
+                  <div class="desc-en">
+                    This is the part time job map. We list out salaries and benefits for the establishments near our school. Their information and contact method can more easily reach more students, and students can save the time asking the shops individually, while gaining a lot more of information they won't otherwise.
+                  </div>
+                  <div class="desc-zh">
+                    這是打工地圖。我們列出了學校附近店家的薪資和福利。他們的資訊和聯絡方式可以更容易地觸及更多學生，而學生可以省去一一詢問店家的時間，同時獲得更多他們原本不會得知的資訊。
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/rentmap.png</div>
+                  <div class="desc-en">
+                    This is the rent map. Every year, lots of freshmen will flock out of the dorm in search for their ideal place to rent, but there are little information on who to contact, what's the rent, deposit, etc. and most will compromise their wishes with what they can get their hands on. Well, we did the hard work of getting the information and placed it here for you. You're welcome!
+                  </div>
+                  <div class="desc-zh">
+                    這是租屋地圖。每年都有許多大一新生搬出宿舍，尋找他們理想的租屋處。然而，關於要聯繫誰、租金、押金等資訊卻很少，導致大多數人最終只能屈就於他們能找到的房子，而非自己真正想要的。別擔心，我們已經為您辛苦蒐集並整理好所有資訊了。不客氣！
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Portfolio Card 1: Video Card -->
             <div class="portfolio-card video-card" style="--card-text-color: #ffffff;">
               <video class="card-video" src="./assets/videos/sora.mp4" autoplay loop muted playsinline></video>
@@ -254,71 +294,32 @@ git push -->
                 </div>
               </div>
             </div>
-            <!-- Portfolio Card 2: Color Card -->
+            <!-- Portfolio Card 5: Color Card -->
             <div class="portfolio-card color-bg" style="--card-bg-color: #3B4C62; --card-text-color: #ECEFFE;">
               <button class="info-icon"><i class="fa fa-info-circle"></i></button>
               <div class="card-content">
-                <h3>
-                  <span class="lang-en">Tableau dashboards</span>
-                  <span class="lang-zh">Tableau 儀錶板</span>
-                </h3>
-                <p>
-                  <span class="lang-en">
-                    After learning about Python, SQL, and other data related skills, I started learning about how to visualize large sets of data with Tableau, a data visualization tool.<br><br>Though the data that I visualized aren't huge, the visualization techniques are still the same, so I used quartely financail results of American tech companies to practice Tableau dashboards crafting.
-                  </span>
-                  <span class="lang-zh">
-                    在學習了 Python、SQL 與其他與資料相關的技能後，我開始學習如何使用 Tableau 這個資料視覺化工具，來視覺化大型資料集。<br><br>雖然我使用的資料集並不算龐大，但視覺化的技術依然相同，因此我使用美國科技公司季度財務結果來練習 Tableau 儀表板製作.
-                  </span>
-                </p>
-              </div>
-              <div class="hidden-images" style="display: none;">
-                <div class="hidden-image">
-                  <div class="img-src">./assets/images/TSLA.png</div>
-                  <div class="desc-en">
-                    This is the TESLA dashboard I created for it's second quarter financials, containing important and fitting metrics of the company. Fun fact, I operate with more than 1 million NT$, TESLA is my largest holding and the reason I have a million in the first place.
-                  </div>
-                  <div class="desc-zh">
-                    這是我為 TESLA 第二季度財務數據建立的儀表板，包含了各種適合特斯拉的指標. 有趣的事實是, 我的操作資金超過一百萬新台幣, TESLA 是我持有最多的股票, 也是我能賺到這筆資金的主要原因.
-                  </div>
-                </div>
-                <div class="hidden-image">
-                  <div class="img-src">./assets/images/META.png</div>
-                  <div class="desc-en">
-                    This is the META dashboard I created for it's second quarter financials, also with metrics fitting of the company. META also happens to be my second largest holdings, so I'm basically practicing Tableau while learning more about my stocks.
-                  </div>
-                  <div class="desc-zh">
-                    這是我為 META 第二季度財務數據所建立的儀表板, 同樣包含了適合該公司的指標. META 是我持有的第二大股票, 所以我基本上是同時在練習 Tableau 和更深入地瞭解了自己的投資.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Portfolio Card 3: Color Card -->
-            <div class="portfolio-card color-bg" style="--card-bg-color: #3B4C62; --card-text-color: #ECEFFE;">
-              <button class="info-icon"><i class="fa fa-info-circle"></i></button>
-              <div class="card-content">
-                <a href="https://ccumap.com" class="custom-link">
+                <a href = "https://wcr.nstc.gov.tw/CR/library/ShowPDF.aspx?appl_year=113&idno=45%2439%2443%2441%2442%2445%2445%2441%2440%2469%241011&code=C802" class = "custom-link"">
                   <h3>
-                    <span class="lang-en">A map website for salaries listing near CCU</span>
-                    <span class="lang-zh">中正大學打工地圖網站</span>
+                    <span class="lang-en">Internal Carbon Pricing research</span>
+                    <span class="lang-zh">內部碳定價研究</span>
                   </h3>
                 </a>
                 <p>
                   <span class="lang-en">
-                    This website took me quite some time. After lots of git pushes, I finished the prodcut and hosted it on Github. You know, what I learned most about writing websites is not the hard coding skills, we have AI for that now, but the intimate understanding of how internet works and the realizations that came with it.
-                  </span>
+                    For the first half of 2024, I've been cooperating with my department chairman to come up with an Internal Carbon Pricing system to try to reduce our school's carbon emission with nothing but information and non-monetary incentives. I've studied successful cases aboard and have learned a great deal. Though the National Science and Technology Council ultimately did not back my research so it never got pass the planning stage, I got the sustainable investment research scholarship from Amundi, Europe's largest asset management firm, and they only hand this scholarship out to MIT and a few other schools!</span>
                   <span class="lang-zh">
-                    這個網站花了我蠻長的時間。在無數的 git push 後，我把成品 host 在 Github 上。你知道，我從寫網站中學到的最多東西不是寫程式的硬能力，我們有 AI 能幫我們做這些了，而是對網際網路運作的深度了解以及隨之而來的醒悟。
+                    在 2024 年上半年，我和我們的系主任合作，嘗試制定一套校內碳定價機制，想透過資訊與動機設計來減少學校的碳排放。為了此研究，我閱讀了許多國外的成功案例，收穫頗豐。雖然國科會最後並沒有支持我的研究，因此計劃始終停留在規劃階段，但我獲得了歐洲最大資產管理公司 Amundi 頒發的永續投資研究獎學金，而這項獎學金只有麻省理工學院 (MIT) 和少數幾所大學才有資格申請！
                   </span>
                 </p>
               </div>
               <div class="hidden-images" style="display: none;">
                 <div class="hidden-image">
-                  <div class="img-src">./assets/images/ccumap.png</div>
+                  <div class="img-src">./assets/images/research.png</div>
                   <div class="desc-en">
-                    Getting the underlying map mechanics and the overlaying interaction layer to work together is a pain in my rear end, especially on mobile. Hosting websites, dealing with domain name systems, all a first to me, but a really fun first. Check it out at ccumap.com.
+                    This is a screenshot of a page of the research plan that I crafted for our school, detailing how the Internal Carbon Pricing system design would go about. I really enjoyed learning about this, sad that the council didn't back this up. You can find the full research plan in my resume through the hyperlink attached in it.
                   </div>
                   <div class="desc-zh">
-                    要讓底層地圖機制和上層互動層一起運作，讓我頭痛不已，在行動裝置上更是如此。網站托管、處理域名系統，這些對我來說都是第一次，但卻是非常有趣的一次。歡迎來 ccumap.com 一看究竟。
+                    這張圖片是我為學校撰寫的研究計畫截圖，詳細說明了校內碳定價系統的設計原則。我非常享受在這個研究過程中學習，雖然最後很可惜沒能獲得委員會的支持。完整的研究計畫可以在我的履歷中透過超連結查看。
                   </div>
                 </div>
               </div>
@@ -363,32 +364,40 @@ git push -->
                 </div>
               </div>
             </div>
-            <!-- Portfolio Card 5: Color Card -->
+            <!-- Portfolio Card 2: Color Card -->
             <div class="portfolio-card color-bg" style="--card-bg-color: #3B4C62; --card-text-color: #ECEFFE;">
               <button class="info-icon"><i class="fa fa-info-circle"></i></button>
               <div class="card-content">
-                <a href = "https://wcr.nstc.gov.tw/CR/library/ShowPDF.aspx?appl_year=113&idno=45%2439%2443%2441%2442%2445%2445%2441%2440%2469%241011&code=C802" class = "custom-link"">
-                  <h3>
-                    <span class="lang-en">Internal Carbon Pricing research</span>
-                    <span class="lang-zh">內部碳定價研究</span>
-                  </h3>
-                </a>
+                <h3>
+                  <span class="lang-en">Tableau dashboards</span>
+                  <span class="lang-zh">Tableau 儀錶板</span>
+                </h3>
                 <p>
                   <span class="lang-en">
-                    For the first half of 2024, I've been cooperating with my department chairman to come up with an Internal Carbon Pricing system to try to reduce our school's carbon emission with nothing but information and non-monetary incentives. I've studied successful cases aboard and have learned a great deal. Though the National Science and Technology Council ultimately did not back my research so it never got pass the planning stage, I got the sustainable investment research scholarship from Amundi, Europe's largest asset management firm, and they only hand this scholarship out to MIT and a few other schools!</span>
+                    After learning about Python, SQL, and other data related skills, I started learning about how to visualize large sets of data with Tableau, a data visualization tool.<br><br>Though the data that I visualized aren't huge, the visualization techniques are still the same, so I used quartely financail results of American tech companies to practice Tableau dashboards crafting.
+                  </span>
                   <span class="lang-zh">
-                    在 2024 年上半年，我和我們的系主任合作，嘗試制定一套校內碳定價機制，想透過資訊與動機設計來減少學校的碳排放。為了此研究，我閱讀了許多國外的成功案例，收穫頗豐。雖然國科會最後並沒有支持我的研究，因此計劃始終停留在規劃階段，但我獲得了歐洲最大資產管理公司 Amundi 頒發的永續投資研究獎學金，而這項獎學金只有麻省理工學院 (MIT) 和少數幾所大學才有資格申請！
+                    在學習了 Python、SQL 與其他與資料相關的技能後，我開始學習如何使用 Tableau 這個資料視覺化工具，來視覺化大型資料集。<br><br>雖然我使用的資料集並不算龐大，但視覺化的技術依然相同，因此我使用美國科技公司季度財務結果來練習 Tableau 儀表板製作.
                   </span>
                 </p>
               </div>
               <div class="hidden-images" style="display: none;">
                 <div class="hidden-image">
-                  <div class="img-src">./assets/images/research.png</div>
+                  <div class="img-src">./assets/images/TSLA.png</div>
                   <div class="desc-en">
-                    This is a screenshot of a page of the research plan that I crafted for our school, detailing how the Internal Carbon Pricing system design would go about. I really enjoyed learning about this, sad that the council didn't back this up. You can find the full research plan in my resume through the hyperlink attached in it.
+                    This is the TESLA dashboard I created for it's second quarter financials, containing important and fitting metrics of the company. Fun fact, I operate with more than 1 million NT$, TESLA is my largest holding and the reason I have a million in the first place.
                   </div>
                   <div class="desc-zh">
-                    這張圖片是我為學校撰寫的研究計畫截圖，詳細說明了校內碳定價系統的設計原則。我非常享受在這個研究過程中學習，雖然最後很可惜沒能獲得委員會的支持。完整的研究計畫可以在我的履歷中透過超連結查看。
+                    這是我為 TESLA 第二季度財務數據建立的儀表板，包含了各種適合特斯拉的指標. 有趣的事實是, 我的操作資金超過一百萬新台幣, TESLA 是我持有最多的股票, 也是我能賺到這筆資金的主要原因.
+                  </div>
+                </div>
+                <div class="hidden-image">
+                  <div class="img-src">./assets/images/META.png</div>
+                  <div class="desc-en">
+                    This is the META dashboard I created for it's second quarter financials, also with metrics fitting of the company. META also happens to be my second largest holdings, so I'm basically practicing Tableau while learning more about my stocks.
+                  </div>
+                  <div class="desc-zh">
+                    這是我為 META 第二季度財務數據所建立的儀表板, 同樣包含了適合該公司的指標. META 是我持有的第二大股票, 所以我基本上是同時在練習 Tableau 和更深入地瞭解了自己的投資.
                   </div>
                 </div>
               </div>
